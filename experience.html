@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIENCE | VITALII ZHDANSKYI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <header class="site-header">
+            <div class="lang-selector-header">
+                <button class="lang-mini-btn" onclick="setLanguage('es')">[ES]</button>
+                <button class="lang-mini-btn" onclick="setLanguage('en')">[EN]</button>
+                <button class="lang-mini-btn" onclick="setLanguage('ua')">[UA]</button>
+            </div>
+            <h1 class="main-title"><a href="index.html">VITALII ZHDANSKYI</a></h1>
+
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link" data-key="nav.01">[ 01. HOME ]</a>
+                <a href="experience.html" class="nav-link active" data-key="nav.02">[ 02. EXPERIENCE ]</a>
+                <a href="projects.html" class="nav-link" data-key="nav.03">[ 03. PROJECTS ]</a>
+                <a href="contact.html" class="nav-link" data-key="nav.04">[ 04. CONTACT ]</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="content-section" style="text-align:center;">
+
+                <!-- TRIGGER BUTTON REMOVED (Always Visible) -->
+
+                <!-- EXPERIENCE CONTENT (VISIBLE) -->
+                <div id="experience-details" style="text-align: left; display: block;">
+                    <div class="card-container">
+                        <!-- Role 1 -->
+                        <article class="terminal-card">
+                            <div class="card-header">
+                                <span class="job-title" data-key="exp.role1">BACKEND DEVELOPER</span>
+                                <span class="timeframe">JAVA / SPRING BOOT</span>
+                            </div>
+                            <div class="card-body">
+                                <p data-key="exp.desc1">Design of scalable APIs, security, and microservices.</p>
+                            </div>
+                        </article>
+
+                        <!-- Role 2 -->
+                        <article class="terminal-card">
+                            <div class="card-header">
+                                <span class="job-title" data-key="exp.role2">FREELANCE PYTHON (UPWORK)</span>
+                                <span class="timeframe">AUTOMATION</span>
+                            </div>
+                            <div class="card-body">
+                                <p data-key="exp.desc2">Process automation and data scraping.</p>
+                            </div>
+                        </article>
+
+                        <!-- Role 3 -->
+                        <article class="terminal-card">
+                            <div class="card-header">
+                                <span class="job-title" data-key="exp.role3">MARKETING & ECOMMERCE</span>
+                                <span class="timeframe">ANGULAR / ADS</span>
+                            </div>
+                            <div class="card-body">
+                                <p data-key="exp.desc3">Full store management, Facebook/Google Ads.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>VITALII ZHDANSKYI © 2026</p>
+        </footer>
+    </div>
+    <script src="js/logic.js"></script>
+    <script>window.onload = checkBoot;</script>
+</body>
+
+</html>

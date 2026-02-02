@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TERMINAL GAME | VITALII ZHDANSKYI</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Specific overrides for Game Page to keep it centered and focused */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .game-controls {
+            text-align: center;
+            margin-top: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .back-nav {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="back-nav">
+            <a href="index.html" class="btn-git" data-key="exp.back">
+                << RETORNAR AL SISTEMA PRINCIPAL</a>
+        </nav>
+
+        <section class="content-section">
+            <h2 class="section-title" data-key="game.title">>> ./TERMINAL_GAME.EXE<span class="blinking-cursor">_</span>
+            </h2>
+
+            <div id="game-ui-container"
+                style="position: relative; border: 2px solid var(--neon-green); background: #000;">
+                <canvas id="gameCanvas" width="800" height="300" style="display: block; width: 100%;"></canvas>
+                <div id="score-display"
+                    style="position: absolute; top: 10px; right: 20px; color: var(--neon-green); font-weight: bold;">
+                    SCORE: 0</div>
+
+                <div id="start-overlay"
+                    style="position: absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); display:flex; flex-direction:column; justify-content:center; align-items:center;">
+                    <h3 style="font-size: 2rem; margin-bottom: 1rem;" data-key="game.waiting">SISTEMA EN ESPERA</h3>
+                    <p style="margin-bottom: 2rem;" data-key="game.start">[ PRESIONA ESPACIO PARA INICIAR ]</p>
+                    <button id="start-btn" class="btn-git" style="cursor: pointer;"
+                        data-key="game.run">EJECUTAR</button>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <p data-key="game.controls">CONTROLES: [ESPACIO] o [TAP PANTALLA] PARA SALTAR</p>
+                <p data-key="game.obj">OBJETIVO: EVADIR LOS ERRORES DE CÓDIGO (BLOCKS)</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/game.js"></script>
+    <script src="js/language_manager.js"></script>
+    <script>window.onload = initLanguage;</script>
+</body>
