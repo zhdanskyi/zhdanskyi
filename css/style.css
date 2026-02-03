@@ -132,6 +132,30 @@ a {
   cursor: pointer;
 }
 
+/* --- DOUBLE GRADIENT FRAME (REFINED) --- */
+.double-frame {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+}
+
+/* Outer Line */
+.double-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--neon-green);
+}
+
+/* Inner Line */
+.double-frame::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid var(--neon-green);
+}
+
 /* --- HUB PAGE (index.html) - STRICT NO SCROLL --- */
 body.hub-body {
   height: 100vh;
@@ -145,7 +169,10 @@ body.hub-body {
 .hub-container {
   display: flex;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
+  /* Tighter constraint */
+  margin: 0 auto;
+  /* Forced Center */
   height: 80vh;
   align-items: center;
   justify-content: center;
