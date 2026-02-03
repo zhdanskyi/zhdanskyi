@@ -4,100 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VITALII ZHDANSKYI | SYSTEM HUB</title>
+    <title>VITALII | PIXEL HUB</title>
+    <!-- FAVICON -->
+    <link rel="icon" href="img/favicon-pixel.png" type="image/png">
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="hub-body">
 
-    <!-- BOOT SCREEN (HUMOR TECH) -->
-    <div id="lang-overlay">
-        <!-- Random Funny Text Here -->
-        <p id="boot-text">>> LOADING SYSTEM...</p>
+    <!-- LANGUAGE TOGGLE (FIXED TOP RIGHT) -->
+    <div class="lang-fixed">
+        <button class="lang-btn" onclick="changeLanguage('es')">ES</button>
+        <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+        <button class="lang-btn" onclick="changeLanguage('ua')">UA</button>
+    </div>
 
-        <div class="boot-selection">
-            <button class="boot-btn" onclick="setLanguage('es'); checkBoot()">[ ESP ]</button>
-            <button class="boot-btn" onclick="setLanguage('en'); checkBoot()">[ ENG ]</button>
-            <button class="boot-btn" onclick="setLanguage('ua'); checkBoot()">[ UKR ]</button>
+    <div class="hub-container">
+        <!-- LEFT: PIXEL IMAGE -->
+        <div class="hub-left">
+            <img src="img/profile_pixel.jpg" alt="Pixel Portrait" class="hub-portrait">
+        </div>
+
+        <!-- RIGHT: NAVIGATION HUB -->
+        <div class="hub-right">
+            <h1 class="hub-title">
+                <span class="text-white" data-i18n="header.main">VITALII</span>
+                <span class="text-green" data-i18n="header.sub">ZHDANSKYI</span>
+            </h1>
+            <p class="hub-subtitle" data-i18n="header.bio">> BACKEND & FULL-STACK</p>
+
+            <nav class="hub-menu">
+                <a href="projects.html" class="menu-link" data-i18n="nav.03">PROJECTS</a>
+                <a href="experience.html" class="menu-link" data-i18n="nav.02">EXPERIENCE</a>
+                <a href="contact.html" class="menu-link" data-i18n="nav.04">CONTACT</a>
+                <a href="cv.html" class="menu-link text-purple" data-i18n="cv.nav">DIGITAL CV</a>
+            </nav>
+
+            <div class="site-footer">
+                <div class="footer-socials">
+                    <a href="https://github.com/zhdanskyi" target="_blank"><img src="img/github-pixel.png" alt="GitHub"
+                            class="social-icon"></a>
+                    <a href="https://linkedin.com/in/zhdanskyi" target="_blank"><img src="img/linkedin-pixel.png"
+                            alt="LinkedIn" class="social-icon"></a>
+                    <a href="mailto:zhdanskyibusiness@gmail.com"><img src="img/email-pixel.png" alt="Email"
+                            class="social-icon"></a>
+                    <a href="https://instagram.com" target="_blank"><img src="img/instagram-pixel.png" alt="Instagram"
+                            class="social-icon"></a>
+                </div>
+                <p class="footer-copy">© 2025 VITALII ZHDANSKYI | <span data-i18n="footer.made">MADE WITH <3 &
+                            CODE</span>
+                </p>
+            </div>
         </div>
     </div>
 
-    <div class="container center-layout">
-        <!-- HEADER -->
-        <header class="site-header">
-            <div class="lang-selector-header">
-                <button class="lang-mini-btn" onclick="setLanguage('es')">[ES]</button>
-                <button class="lang-mini-btn" onclick="setLanguage('en')">[EN]</button>
-                <button class="lang-mini-btn" onclick="setLanguage('ua')">[UA]</button>
-            </div>
-
-            <!-- REDESIGNED SPLIT LAYOUT (Side by Side) -->
-            <div class="home-split">
-                <!-- LEFT COL: TEXT -->
-                <div class="home-text-col">
-                    <h1 class="main-title"><a href="index.html">VITALII ZHDANSKYI</a></h1>
-                    <p class="slogan" data-key="header.slogan">> Backend Developer | Java & Spring Boot Specialist</p>
-                    <p class="bio-text" data-key="header.bio"
-                        style="border-top: 1px solid #333; padding-top: 1rem; margin-top: 1rem;">
-                        Desarrollador apasionado por arquitecturas robustas y código limpio. Especializado en
-                        transformar café en microservicios eficientes.
-                    </p>
-                </div>
-
-                <!-- RIGHT COL: IMAGE -->
-                <div class="home-img-col">
-                    <div class="hex-frame" style="width: 140px; height: 140px;">
-                        <img src="img/vitalii_pixel.jpg" alt="Vitalii Zhdanskyi" class="pixel-avatar"
-                            style="border-radius: 10px;">
-                    </div>
-                </div>
-            </div>
-
-            <!-- SOCIAL ICONS (SUBTLE) -->
-            <div class="social-hub">
-                <a href="https://linkedin.com/in/zhdanskyi" target="_blank" class="social-link" title="LinkedIn">
-                    <img src="img/icon_briefcase_magenta.png" alt="LinkedIn">
-                </a>
-                <a href="https://github.com/zhdanskyi" target="_blank" class="social-link" title="GitHub">
-                    <img src="img/icon_git_small.png" alt="GitHub">
-                </a>
-                <a href="game.html" class="social-link" title="Play Game">
-                    <img src="img/icon_game.png" alt="Game">
-                </a>
-            </div>
-
-            <!-- NAVBAR (MODULES) -->
-            <nav class="main-nav">
-                <!-- EXPERIENCE -->
-                <a href="experience.html" class="module-link">
-                    <img src="img/icon_experience.png" alt="Exp" class="module-icon">
-                    <span class="module-text" data-key="nav.02">[ EXPERIENCE ]</span>
-                </a>
-
-                <!-- PROJECTS -->
-                <a href="projects.html" class="module-link">
-                    <img src="img/icon_projects.png" alt="Proj" class="module-icon">
-                    <span class="module-text" data-key="nav.03">[ PROJECTS ]</span>
-                </a>
-
-                <!-- CONTACT -->
-                <a href="contact.html" class="module-link">
-                    <img src="img/icon_contact.png" alt="Cont" class="module-icon">
-                    <span class="module-text" data-key="nav.04">[ CONTACT ]</span>
-                </a>
-            </nav>
-        </header>
-
-        <footer class="site-footer">
-            <p>VITALII ZHDANSKYI © 2026 | BUILT WITH CODE.</p>
-        </footer>
-    </div>
-
+    <script src="js/background.js"></script>
     <script src="js/logic.js"></script>
-    <script>window.onload = checkBoot;</script>
 </body>
 
 </html>

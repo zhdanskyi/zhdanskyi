@@ -4,78 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT | VITALII ZHDANSKYI</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>VITALII | CONTACT</title>
+    <!-- FAVICON -->
+    <link rel="icon" href="img/favicon-pixel.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="sub-page">
 
-    <div class="container">
-        <!-- HEADER -->
-        <header class="site-header">
-            <div class="lang-selector-header">
-                <button class="lang-mini-btn" onclick="setLanguage('es')">[ES]</button>
-                <button class="lang-mini-btn" onclick="setLanguage('en')">[EN]</button>
-                <button class="lang-mini-btn" onclick="setLanguage('ua')">[UA]</button>
-            </div>
-            <h1 class="main-title"><a href="index.html">VITALII ZHDANSKYI</a></h1>
+    <!-- SUB PAGE NAV -->
+    <div class="sub-nav">
+        <a href="index.html" class="btn-back" data-i18n="btn.back">
+            < HUB</a>
 
-            <nav class="main-nav">
-                <a href="index.html" class="nav-link" data-key="nav.01">[ 01. HOME ]</a>
-                <a href="experience.html" class="nav-link" data-key="nav.02">[ 02. EXPERIENCE ]</a>
-                <a href="projects.html" class="nav-link" data-key="nav.03">[ 03. PROJECTS ]</a>
-                <a href="contact.html" class="nav-link active" data-key="nav.04">[ 04. CONTACT ]</a>
-            </nav>
-
-            <h2 class="section-title" data-key="cont.title">> INITIATE CONNECTION</h2>
-        </header>
-
-        <main>
-            <section class="content-section">
-                <div class="terminal-card contact-card" style="border:none; padding:0;">
-
-                    <div class="form-container" style="border:none; padding:0;">
-                        <!-- Minimalist form -->
-                        <form action="https://formsubmit.co/zhdanskyibusiness@gmail.com" method="POST"
-                            class="terminal-form" onsubmit="return confirmSend()">
-                            <input type="hidden" name="_next" value="http://localhost:3000/contact.html">
-                            <input type="hidden" name="_captcha" value="false">
-
-                            <div class="form-group">
-                                <label for="email" data-key="cont.name">> NAME / EMAIL:</label>
-                                <input type="text" id="email" name="email" required placeholder="user@domain.com">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message" data-key="cont.msg">> MESSAGE:</label>
-                                <textarea id="message" name="message" rows="5" required placeholder="..."></textarea>
-                            </div>
-
-                            <button type="submit" class="btn-submit-pro" data-key="cont.send">[ SEND ]</button>
-                        </form>
-                    </div>
-
-                    <!-- WHATSAPP INTEGRATION -->
-                    <div style="margin-top: 3rem; text-align: center; border-top: 1px dashed #333; padding-top: 2rem;">
-                        <p class="form-label" style="font-size: 0.9rem;">>> DIRECT LINK:</p>
-                        <a href="https://wa.me/34602446939" target="_blank" class="btn-submit-pro"
-                            style="display: inline-flex; align-items: center; gap: 10px; border-color: #25D366; color: #25D366;">
-                            <span>[ WHATSAPP ]</span>
-                        </a>
-                    </div>
+                <div class="lang-fixed">
+                    <button class="lang-btn" onclick="changeLanguage('es')">ES</button>
+                    <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="changeLanguage('ua')">UA</button>
                 </div>
-            </section>
-        </main>
-
-        <footer class="site-footer">
-            <p>VITALII ZHDANSKYI © 2026</p>
-        </footer>
     </div>
+
+    <main class="content-container"
+        style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 50vh;">
+
+        <div class="page-header">
+            <h1 class="page-title" data-i18n="nav.04">CONTACT</h1>
+        </div>
+
+        <div class="contact-wrapper">
+            <form action="https://formsubmit.co/zhdanskyibusiness@gmail.com" method="POST">
+                <div class="form-group">
+                    <label class="form-label" data-i18n="cont.name">> IDENTIFY YOURSELF (NAME):</label>
+                    <input type="text" name="name" class="form-input" required placeholder="_" data-i18n="cont.name.ph">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" data-i18n="cont.email">> COMMUNICATION CHANNEL (EMAIL):</label>
+                    <input type="email" name="email" class="form-input" required placeholder="_"
+                        data-i18n="cont.email.ph">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" data-i18n="cont.msg">> TRANSMISSION (MESSAGE):</label>
+                    <textarea name="message" rows="5" class="form-input" required placeholder="_"
+                        data-i18n="cont.msg.ph"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit" data-i18n="cont.send">[ SEND TRANSMISSION ]</button>
+            </form>
+
+            <div style="margin-top: 2rem; text-align: center; border-top: 1px dashed #333; padding-top: 1rem;">
+                <p style="color: #666; font-size: 0.8rem; margin-bottom: 1rem;" data-i18n="cont.or">OR ESTABLISH DIRECT
+                    UPLINK:</p>
+                <a href="https://wa.me/34602446939" target="_blank" class="btn-link" style="color: var(--neon-green);"
+                    data-i18n="cont.wa">WHATSAPP ENCRYPTED LINK >></a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-socials">
+            <a href="https://github.com/zhdanskyi" target="_blank"><img src="img/github-pixel.png" alt="GitHub"
+                    class="social-icon"></a>
+            <a href="https://linkedin.com/in/zhdanskyi" target="_blank"><img src="img/linkedin-pixel.png" alt="LinkedIn"
+                    class="social-icon"></a>
+            <a href="mailto:zhdanskyibusiness@gmail.com"><img src="img/email-pixel.png" alt="Email"
+                    class="social-icon"></a>
+            <a href="https://instagram.com" target="_blank"><img src="img/instagram-pixel.png" alt="Instagram"
+                    class="social-icon"></a>
+        </div>
+        <p class="footer-copy">© 2025 VITALII ZHDANSKYI | <span data-i18n="footer.made">MADE WITH <3 & CODE</span>
+        </p>
+    </footer>
+
     <script src="js/logic.js"></script>
-    <script>window.onload = checkBoot;</script>
 </body>
 
 </html>

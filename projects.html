@@ -4,76 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROJECTS | VITALII ZHDANSKYI</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>VITALII | PROJECTS</title>
+    <!-- FAVICON -->
+    <link rel="icon" href="img/favicon-pixel.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="sub-page">
 
-    <div class="container">
-        <!-- HEADER -->
-        <header class="site-header">
-            <div class="lang-selector-header">
-                <button class="lang-mini-btn" onclick="setLanguage('es')">[ES]</button>
-                <button class="lang-mini-btn" onclick="setLanguage('en')">[EN]</button>
-                <button class="lang-mini-btn" onclick="setLanguage('ua')">[UA]</button>
-            </div>
-            <h1 class="main-title"><a href="index.html">VITALII ZHDANSKYI</a></h1>
+    <!-- SUB PAGE NAV -->
+    <div class="sub-nav">
+        <a href="index.html" class="btn-back" data-i18n="btn.back">
+            < HUB</a>
 
-            <nav class="main-nav">
-                <a href="index.html" class="nav-link" data-key="nav.01">[ 01. HOME ]</a>
-                <a href="experience.html" class="nav-link" data-key="nav.02">[ 02. EXPERIENCE ]</a>
-                <a href="projects.html" class="nav-link active" data-key="nav.03">[ 03. PROJECTS ]</a>
-                <a href="contact.html" class="nav-link" data-key="nav.04">[ 04. CONTACT ]</a>
-            </nav>
-        </header>
-
-        <main>
-            <section class="content-section">
-
-                <h2 class="section-title" data-key="proj.inv">>> CHEST CONTENTS:</h2>
-
-                <!-- FILTER BAR (ROBUST) -->
-                <!-- FILTER BAR REMOVED -->
-
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-box" data-year="2025">
-                        <h3>ECOMMERCE API v2</h3>
-                        <p class="tech-stack">[ SPRING BOOT | KAFKA | DOCKER ]</p>
-                        <p class="desc">High performance backend for high traffic stores.</p>
-                        <a href="https://github.com/zhdanskyi" target="_blank" class="btn-git">[ GITHUB ]</a>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-box" data-year="2024">
-                        <h3>TASK AUTOMATION BOT</h3>
-                        <p class="tech-stack">[ PYTHON | SELENIUM | API ]</p>
-                        <p class="desc">Bot for automating administrative tasks on Upwork.</p>
-                        <a href="https://github.com/zhdanskyi" target="_blank" class="btn-git">[ GITHUB ]</a>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-box" data-year="2025">
-                        <h3>PORTFOLIO SYSTEM</h3>
-                        <p class="tech-stack">[ HTML | CSS | JS ]</p>
-                        <p class="desc">Interactive interface with multi-language support.</p>
-                        <a href="https://github.com/zhdanskyi" target="_blank" class="btn-git">[ GITHUB ]</a>
-                    </div>
+                <div class="lang-fixed">
+                    <button class="lang-btn" onclick="changeLanguage('es')">ES</button>
+                    <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="changeLanguage('ua')">UA</button>
                 </div>
-
-            </section>
-        </main>
-
-        <footer class="site-footer">
-            <p>VITALII ZHDANSKYI © 2026</p>
-        </footer>
     </div>
+
+    <main class="content-container">
+
+        <div class="page-header">
+            <h1 class="page-title" data-i18n="nav.03">PROJECTS</h1>
+        </div>
+
+        <div class="card-grid">
+
+            <!-- Project 1 -->
+            <article class="pixel-card">
+                <div class="card-tech">[ SPRING BOOT | KAFKA ]</div>
+                <h2 class="card-title">ECOMMERCE API V2</h2>
+                <p class="card-desc" data-i18n="proj.1.desc">
+                    Microservices architecture handling 10k+ req/sec. Features advanced caching with Redis and async
+                    messaging via Kafka.
+                </p>
+                <a href="https://github.com/zhdanskyi" target="_blank" class="btn-link" data-i18n="btn.view">VIEW SOURCE
+                    >></a>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="pixel-card">
+                <div class="card-tech">[ PYTHON | SELENIUM ]</div>
+                <h2 class="card-title">UPWORK AUTO-BOT</h2>
+                <p class="card-desc" data-i18n="proj.2.desc">
+                    Automation script for proposal submission and job filtering. Reduces manual overhead by 80%.
+                </p>
+                <a href="https://github.com/zhdanskyi" target="_blank" class="btn-link" data-i18n="btn.view">VIEW SOURCE
+                    >></a>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="pixel-card">
+                <div class="card-tech">[ HTML | CSS | JS ]</div>
+                <h2 class="card-title">PIXEL PORTFOLIO</h2>
+                <p class="card-desc" data-i18n="proj.3.desc">
+                    This website. A pure vanilla MPA architecture focusing on performance and retro aesthetics.
+                </p>
+                <a href="#" class="btn-link" data-i18n="btn.demo">LIVE DEMO >></a>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-socials">
+            <a href="https://github.com/zhdanskyi" target="_blank"><img src="img/github-pixel.png" alt="GitHub"
+                    class="social-icon"></a>
+            <a href="https://linkedin.com/in/zhdanskyi" target="_blank"><img src="img/linkedin-pixel.png" alt="LinkedIn"
+                    class="social-icon"></a>
+            <a href="mailto:zhdanskyibusiness@gmail.com"><img src="img/email-pixel.png" alt="Email"
+                    class="social-icon"></a>
+            <a href="https://instagram.com" target="_blank"><img src="img/instagram-pixel.png" alt="Instagram"
+                    class="social-icon"></a>
+        </div>
+        <p class="footer-copy">© 2025 VITALII ZHDANSKYI | <span data-i18n="footer.made">MADE WITH <3 & CODE</span>
+        </p>
+    </footer>
+
     <script src="js/logic.js"></script>
-    <script>window.onload = checkBoot;</script>
 </body>
 
 </html>

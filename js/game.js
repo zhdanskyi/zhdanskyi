@@ -2,7 +2,7 @@
 const canvas = document.getElementById('gameCanvas');
 if (canvas) {
     const ctx = canvas.getContext('2d');
-    
+
     // --- Responsive Canvas ---
     function resizeCanvas() {
         const parent = canvas.parentElement;
@@ -52,6 +52,12 @@ if (canvas) {
         loop();
     }
 
+    function endGame() {
+        if (score == 60) {
+            gameOver();
+        }
+    }
+
     function gameOver() {
         isPlaying = false;
         cancelAnimationFrame(frameId);
@@ -77,7 +83,7 @@ if (canvas) {
 
         // Spawn
         spawnTimer++;
-        if (spawnTimer > Math.random() * 50 + (1000/gameSpeed)) { // Rough random timer
+        if (spawnTimer > Math.random() * 50 + (1000 / gameSpeed)) { // Rough random timer
             obstacles.push({
                 x: canvas.width,
                 y: 250,
@@ -148,7 +154,7 @@ if (canvas) {
     window.addEventListener('keydown', e => {
         if (e.code === 'Space') {
             e.preventDefault();
-            if(!isPlaying && startOverlay.style.display !== 'none') {
+            if (!isPlaying && startOverlay.style.display !== 'none') {
                 startGame();
             } else if (dino.grounded) {
                 dino.dy = dino.jumpForce;
@@ -158,7 +164,7 @@ if (canvas) {
 
     canvas.addEventListener('touchstart', e => {
         e.preventDefault();
-        if(!isPlaying && startOverlay.style.display !== 'none') {
+        if (!isPlaying && startOverlay.style.display !== 'none') {
             startGame();
         } else if (dino.grounded) {
             dino.dy = dino.jumpForce;

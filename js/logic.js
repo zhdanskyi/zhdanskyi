@@ -1,103 +1,205 @@
-
-const bootMessages = [
-    "> GENERATING CODE BIOMES... [OK]",
-    "> MINING DATABASE BUGS... [99%]",
-    "> TAMING JAVA SLIMES... [SUCCESS]",
-    "> WHERE'S THE GUIDE? OH, IT'S ME. [LOADING]",
-    "> BUILDING WORLD... [TERRAFORMING]",
-    "> SUMMONING CTHULHU'S EYE... [WAIT]",
-    "> COMPILING COFFEE INTO JAVA... [DONE]",
-    "> DEFEATING DEPENDENCY HELL... [CRITICAL HIT]",
-    "> SPAWNING NPCs... [RECRUITERS DETECTED]"
-];
-
 const translations = {
     es: {
-        "header.slogan": "> Backend Developer | Java & Spring Boot Specialist",
-        "header.bio": "Desarrollador apasionado por arquitecturas robustas y código limpio. Especializado en transformar café en microservicios eficientes.",
-        "top.slogan": "> SYSTEM_ADMIN // ONLINE",
-        "nav.01": "[ 01. INICIO ]",
-        "nav.02": "[ 02. EXPERIENCIA ]",
-        "nav.03": "[ 03. PROYECTOS ]",
-        "nav.04": "[ 04. CONTACTO ]",
+        "meta.title": "VITALII | CARTERA PIXELADA",
+        "header.main": "VITALII",
+        "header.sub": "ZHDANSKYI",
+        "header.bio": "> BACKEND & FULL-STACK",
 
-        "exp.btn.open": "[ ABRIR INVENTARIO DE HABILIDADES ]",
-        "exp.role1": "DESARROLLADOR BACKEND",
-        "exp.desc1": "Diseño de APIs escalables, seguridad y microservicios (Java/Spring Boot).",
-        "exp.role2": "FREELANCE PYTHON (UPWORK)",
-        "exp.desc2": "Automatización de procesos y scraping de datos para clientes globales.",
-        "exp.role3": "MARKETING & ECOMMERCE",
-        "exp.desc3": "Gestión completa de tiendas, Facebook/Google Ads y desarrollo Angular.",
+        "nav.03": "PROYECTOS",
+        "nav.02": "EXPERIENCIA",
+        "nav.04": "CONTACTO",
+        "cv.nav": "CV DIGITAL",
 
-        "proj.filter.all": "TODOS",
-        "proj.filter.2024": "2024",
-        "proj.filter.2025": "2025",
-        "proj.inv": ">> CONTENIDO DEL COFRE:",
+        "footer.made": "HECHO CON <3 Y CÓDIGO",
 
-        "cont.title": "> INICIAR CONEXIÓN",
-        "cont.name": "> NOMBRE / INFO:",
-        "cont.msg": "> MENSAJE:",
-        "cont.send": "[ ENVIAR ]",
-        "cont.whatsapp": "[ WHATSAPP ]",
-        "game.link": "[ JUGAR ]"
+        "btn.back": "< VOLVER AL HUB",
+        "btn.view": "VER CÓDIGO >>",
+        "btn.demo": "DEMO EN VIVO >>",
+
+        /* --- PROJECTS --- */
+        "proj.1.desc": "Arquitectura de microservicios manejando 10k+ req/sec. Caché avanzado con Redis y mensajería asíncrona vía Kafka.",
+        "proj.2.desc": "Script de automatización para envío de propuestas y filtrado de trabajos. Reduce la carga manual un 80%.",
+        "proj.3.desc": "Este sitio web. Una arquitectura MPA pura centrada en rendimiento y estética retro.",
+
+        /* --- EXPERIENCE --- */
+        "exp.role1": "JAVA BACKEND DEVELOPER",
+        "exp.role1.time": "2025 - ACTUALIDAD",
+        "exp.desc1": "Desarrollo de lógica de negocio compleja: sistemas CRUD avanzados y simulación de arquitectura bancaria segura (transacciones, concurrencia, seguridad).",
+
+        "exp.role2": "ECOMMERCE TECH LEAD",
+        "exp.role2.time": "2025 (6 MESES)",
+        "exp.desc2": "Desarrollo y despliegue de tiendas Shopify. Implementación técnica de estrategias SEO/SEM y optimización de Core Web Vitals.",
+
+        "exp.role3": "FREELANCE PYTHON DEV",
+        "exp.role3.time": "2023 - 2024 | UPWORK",
+        "exp.desc3": "Automatización de flujos de trabajo. Desarrollo de Telegram Bots interactivos y consumo de APIs externas para clientes internacionales.",
+
+        /* --- CONTACT --- */
+        "cont.name": "> IDENTIFÍCATE (NOMBRE):",
+        "cont.name.ph": "_Tu Nombre",
+        "cont.email": "> CANAL DE COMUNICACIÓN (EMAIL):",
+        "cont.email.ph": "_usuario@dominio.com",
+        "cont.msg": "> TRANSMISIÓN (MENSAJE):",
+        "cont.msg.ph": "_Escribe tu mensaje aquí...",
+        "cont.send": "[ ENVIAR TRANSMISIÓN ]",
+        "cont.or": "O ESTABLECE ENLACE DIRECTO:",
+        "cont.wa": "ENLACE ENCRIPTADO WHATSAPP >>",
+
+        /* --- CV SPECIFIC --- */
+        "cv.title": "CV DIGITAL",
+
+        "cv.summary.title": ">> PERFIL DEL SISTEMA",
+        "cv.summary.text": "Estudiante de Grado Superior en Desarrollo de Aplicaciones Multiplataforma (2025-2027) con mindset enfocado en arquitecturas escalables. Combinación de formación académica reglada y certificación intensiva en Python. Especialista en backend, microservicios y soluciones Full Stack.",
+
+        "cv.skills.title": ">> MATRIZ DE HABILIDADES",
+        "cv.skills.tech": "HABILIDADES TÉCNICAS",
+        "cv.skills.soft": "SOFT SKILLS (ALTO RENDIMIENTO)",
+        "cv.soft.1": "EXTREME OWNERSHIP: Liderazgo y colaboración bajo presión.",
+        "cv.soft.2": "ADVANCED PROBLEM SOLVING: Resolución analítica de conflictos.",
+        "cv.soft.3": "RAPID ADAPTABILITY: Aprendizaje acelerado de nuevas tecnologías.",
+
+        "cv.history.title": ">> HISTORIAL DE EJECUCIÓN",
+
+        "cv.edu.title": ">> BASE DE CONOCIMIENTOS (EDUCACIÓN)",
+        "cv.edu.dam": "TÉCNICO SUPERIOR DAM",
+        "cv.edu.dam.time": "2025 - 2027",
+        "cv.edu.dam.desc": "Stack Full Stack: Java (Spring Boot), Angular, MySQL, MongoDB, React, Node.js.",
+
+        "cv.edu.mate": "CERTIFICACIÓN PYTHON PRO",
+        "cv.edu.mate.time": "MATE ACADEMY",
+        "cv.edu.mate.desc": "Especialización profunda en Django, DRF, Flask y FastAPI. OOP sólida, Algoritmos complejos y ML."
     },
     en: {
-        "header.slogan": "> Backend Developer | Java & Spring Boot Specialist",
-        "header.bio": "Developer passionate about robust architectures and clean code. Specialized in transforming coffee into efficient microservices.",
-        "top.slogan": "> SYSTEM_ADMIN // ONLINE",
-        "nav.01": "[ 01. HOME ]",
-        "nav.02": "[ 02. EXPERIENCE ]",
-        "nav.03": "[ 03. PROJECTS ]",
-        "nav.04": "[ 04. CONTACT ]",
+        "meta.title": "VITALII | PIXEL PORTFOLIO",
+        "header.main": "VITALII",
+        "header.sub": "ZHDANSKYI",
+        "header.bio": "> BACKEND & FULL-STACK",
 
-        "exp.btn.open": "[ OPEN SKILL INVENTORY ]",
-        "exp.role1": "BACKEND DEVELOPER",
-        "exp.desc1": "Design of scalable APIs, security, and microservices (Java/Spring Boot).",
-        "exp.role2": "FREELANCE PYTHON (UPWORK)",
-        "exp.desc2": "Process automation and data scraping for global clients.",
-        "exp.role3": "MARKETING & ECOMMERCE",
-        "exp.desc3": "Full store management, Facebook/Google Ads, and Angular development.",
+        "nav.03": "PROJECTS",
+        "nav.02": "EXPERIENCE",
+        "nav.04": "CONTACT",
+        "cv.nav": "DIGITAL CV",
 
-        "proj.filter.all": "ALL",
-        "proj.filter.2024": "2024",
-        "proj.filter.2025": "2025",
-        "proj.inv": ">> CHEST CONTENTS:",
+        "footer.made": "MADE WITH <3 & CODE",
 
-        "cont.title": "> INITIATE CONNECTION",
-        "cont.name": "> NAME / INFO:",
-        "cont.msg": "> MESSAGE:",
-        "cont.send": "[ SEND ]",
-        "cont.whatsapp": "[ WHATSAPP ]",
-        "game.link": "[ PLAY ]"
+        "btn.back": "< BACK TO HUB",
+        "btn.view": "VIEW SOURCE >>",
+        "btn.demo": "LIVE DEMO >>",
+
+        "proj.1.desc": "Microservices architecture handling 10k+ req/sec. Features advanced caching with Redis and async messaging via Kafka.",
+        "proj.2.desc": "Automation script for proposal submission and job filtering. Reduces manual overhead by 80%.",
+        "proj.3.desc": "This website. A pure vanilla MPA architecture focusing on performance and retro aesthetics.",
+
+        "exp.role1": "JAVA BACKEND DEVELOPER",
+        "exp.role1.time": "2025 - PRESENT",
+        "exp.desc1": "Developing complex business logic: advanced CRUD systems and secure banking architecture simulation (transactions, concurrency, security).",
+
+        "exp.role2": "ECOMMERCE TECH LEAD",
+        "exp.role2.time": "2025 (6 MONTHS)",
+        "exp.desc2": "Shopify store development & deployment. Technical implementation of SEO/SEM strategies and Core Web Vitals optimization.",
+
+        "exp.role3": "FREELANCE PYTHON DEV",
+        "exp.role3.time": "2023 - 2024 | UPWORK",
+        "exp.desc3": "Workflow Automation. Development of interactive Telegram Bots and external API consumption for international clients.",
+
+        "cont.name": "> IDENTIFY YOURSELF (NAME):",
+        "cont.name.ph": "_Your Name",
+        "cont.email": "> COMMUNICATION CHANNEL (EMAIL):",
+        "cont.email.ph": "_user@domain.com",
+        "cont.msg": "> TRANSMISSION (MESSAGE):",
+        "cont.msg.ph": "_Type your message...",
+        "cont.send": "[ SEND TRANSMISSION ]",
+        "cont.or": "OR ESTABLISH DIRECT UPLINK:",
+        "cont.wa": "WHATSAPP ENCRYPTED LINK >>",
+
+        "cv.title": "DIGITAL CV",
+
+        "cv.summary.title": ">> SYSTEM PROFILE",
+        "cv.summary.text": "Multi-platform Application Development Student (2025-2027) with a mindset focused on scalable architectures. Combining formal education with intensive Python certification. Backend, microservices & Full Stack specialist.",
+
+        "cv.skills.title": ">> SKILL MATRIX",
+        "cv.skills.tech": "TECHNICAL SKILLS",
+        "cv.skills.soft": "SOFT SKILLS (HIGH PERFORMANCE)",
+        "cv.soft.1": "EXTREME OWNERSHIP: Leadership and collaboration under pressure.",
+        "cv.soft.2": "ADVANCED PROBLEM SOLVING: Analytical conflict resolution.",
+        "cv.soft.3": "RAPID ADAPTABILITY: Accelerated learning of new technologies.",
+
+        "cv.history.title": ">> EXECUTION HISTORY",
+
+        "cv.edu.title": ">> KNOWLEDGE BASE (EDUCATION)",
+        "cv.edu.dam": "HIGHER TECH DEGREE (DAM)",
+        "cv.edu.dam.time": "2025 - 2027",
+        "cv.edu.dam.desc": "Full Stack: Java (Spring Boot), Angular, MySQL, MongoDB, React, Node.js.",
+
+        "cv.edu.mate": "PYTHON PRO CERTIFICATION",
+        "cv.edu.mate.time": "MATE ACADEMY",
+        "cv.edu.mate.desc": "Deep specialization in Django, DRF, Flask, FastAPI. Solid OOP, Complex Algorithms & Machine Learning."
     },
     ua: {
-        "header.slogan": "> Backend Developer | Java & Spring Boot Specialist",
-        "header.bio": "Розробник, захоплений надійною архітектурою та чистим кодом. Спеціалізуюся на перетворенні кави в ефективні мікросервіси.",
-        "top.slogan": "> SYSTEM_ADMIN // ONLINE",
-        "nav.01": "[ 01. ГОЛОВНА ]",
-        "nav.02": "[ 02. ДОСВІД ]",
-        "nav.03": "[ 03. ПРОЄКТИ ]",
-        "nav.04": "[ 04. КОНТАКТИ ]",
+        "meta.title": "ВІТАЛІЙ | ПІКСЕЛЬНЕ ПОРТФОЛІО",
+        "header.main": "ВІТАЛІЙ",
+        "header.sub": "ЖДАНСЬКИЙ",
+        "header.bio": "> BACKEND & FULL-STACK",
 
-        "exp.btn.open": "[ ВІДКРИТИ ІНВЕНТАР НАВИЧОК ]",
-        "exp.role1": "BACKEND DEVELOPER",
-        "exp.desc1": "Проєктування масштабованих API, безпека та мікросервіси (Java/Spring Boot).",
-        "exp.role2": "FREELANCE PYTHON (UPWORK)",
-        "exp.desc2": "Автоматизація процесів та скрейпінг даних.",
-        "exp.role3": "MARKETING & ECOMMERCE",
-        "exp.desc3": "Повне управління магазинами, Facebook/Google Ads та розробка на Angular.",
+        "nav.03": "ПРОЄКТИ",
+        "nav.02": "ДОСВІД",
+        "nav.04": "КОНТАКТИ",
+        "cv.nav": "ЦИФРОВЕ РЕЗЮМЕ",
 
-        "proj.filter.all": "ВСІ",
-        "proj.filter.2024": "2024",
-        "proj.filter.2025": "2025",
-        "proj.inv": ">> ВМІСТ СКРИНІ:",
+        "footer.made": "ЗРОБЛЕНО З <3 ТА КОДОМ",
 
-        "cont.title": "> ВСТАНОВИТИ ЗВ'ЯЗОК",
-        "cont.name": "> ІМ'Я / ІНФО:",
-        "cont.msg": "> ПОВІДОМЛЕННЯ:",
+        "btn.back": "< НАЗАД ДО ХАБУ",
+        "btn.view": "ДИВИТИСЬ КОД >>",
+        "btn.demo": "НАЖИВО >>",
+
+        "proj.1.desc": "Архітектура мікросервісів, що обробляє 10к+ запитів/сек. Redis кешування та асинхронні повідомлення через Kafka.",
+        "proj.2.desc": "Скрипт автоматизації для подачі заявок та фільтрації вакансій. Зменшує ручну роботу на 80%.",
+        "proj.3.desc": "Цей сайт. Чиста MPA архітектура з фокусом на продуктивність та ретро естетику.",
+
+        "exp.role1": "JAVA BACKEND DEVELOPER",
+        "exp.role1.time": "2025 - НАРАЗІ",
+        "exp.desc1": "Розробка складної бізнес-логіки: просунуті CRUD системи та симуляція безпечної банківської архітектури (транзакції, конкурентність).",
+
+        "exp.role2": "ECOMMERCE TECH LEAD",
+        "exp.role2.time": "2025 (6 МІСЯЦІВ)",
+        "exp.desc2": "Розробка та розгортання магазинів Shopify. Технічна імплементація SEO/SEM стратегій та оптимізація Core Web Vitals.",
+
+        "exp.role3": "FREELANCE PYTHON DEV",
+        "exp.role3.time": "2023 - 2024 | UPWORK",
+        "exp.desc3": "Автоматизація робочих процесів. Розробка інтерактивних Telegram ботів та споживання зовнішніх API для міжнародних клієнтів.",
+
+        "cont.name": "> ІДЕНТИФІКАЦІЯ (ІМ'Я):",
+        "cont.name.ph": "_Ваше Ім'я",
+        "cont.email": "> КАНАЛ ЗВ'ЯЗКУ (EMAIL):",
+        "cont.email.ph": "_user@domain.com",
+        "cont.msg": "> ТРАНСМІСІЯ (ПОВІДОМЛЕННЯ):",
+        "cont.msg.ph": "_Введіть повідомлення...",
         "cont.send": "[ НАДІСЛАТИ ]",
-        "cont.whatsapp": "[ WHATSAPP ]",
-        "game.link": "[ ГРАТИ ]"
+        "cont.or": "АБО ПРЯМИЙ ЗВ'ЯЗОК:",
+        "cont.wa": "ЗАШИФРОВАНИЙ ЛІНК WHATSAPP >>",
+
+        "cv.title": "ЦИФРОВЕ РЕЗЮМЕ",
+
+        "cv.summary.title": ">> ПРОФІЛЬ СИСТЕМИ",
+        "cv.summary.text": "Студент за фахом 'Розробка ПЗ' (2025-2027) з мисленням, орієнтованим на масштабовані архітектури. Поєднання академічної освіти та інтенсивної сертифікації Python. Спеціаліст з бекенду, мікросервісів та Full Stack рішень.",
+
+        "cv.skills.title": ">> МАТРИЦЯ НАВИЧОК",
+        "cv.skills.tech": "ТЕХНІЧНІ НАВИЧКИ",
+        "cv.skills.soft": "SOFT SKILLS (ВИСОКА ЕФЕКТИВНІСТЬ)",
+        "cv.soft.1": "EXTREME OWNERSHIP: Лідерство та співпраця під тиском.",
+        "cv.soft.2": "ADVANCED PROBLEM SOLVING: Аналітичне вирішення конфліктів.",
+        "cv.soft.3": "RAPID ADAPTABILITY: Швидке освоєння нових технологій.",
+
+        "cv.history.title": ">> ІСТОРІЯ ВИКОНАННЯ",
+
+        "cv.edu.title": ">> БАЗА ЗНАНЬ (ОСВІТА)",
+        "cv.edu.dam": "ТЕХНІК РОЗРОБНИК ПЗ (DAM)",
+        "cv.edu.dam.time": "2025 - 2027",
+        "cv.edu.dam.desc": "Стек Full Stack: Java (Spring Boot), Angular, MySQL, MongoDB, React, Node.js.",
+
+        "cv.edu.mate": "PYTHON PRO CERTIFICATION",
+        "cv.edu.mate.time": "MATE ACADEMY",
+        "cv.edu.mate.desc": "Глибока спеціалізація: Django, DRF, Flask, FastAPI. OOP, Складні Алгоритми та ML."
     }
 };
 
@@ -108,10 +210,31 @@ function setLanguage(lang) {
 
 function applyLanguage(lang) {
     if (!translations[lang]) return;
-    document.body.className = lang;
-    document.querySelectorAll('[data-key]').forEach(elem => {
-        const key = elem.getAttribute('data-key');
+    document.body.className = lang + (document.body.classList.contains('hub-body') ? ' hub-body' : ' sub-page');
+
+    // UPDATE BUTTON STATES
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.innerText.toLowerCase() === lang) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    // UPDATE TITLE
+    if (translations[lang]["meta.title"]) {
+        document.title = translations[lang]["meta.title"];
+    }
+
+    // UPDATE TEXT ELEMENTS
+    document.querySelectorAll('[data-i18n]').forEach(elem => {
+        const key = elem.getAttribute('data-i18n');
         if (translations[lang][key]) {
+            // Apply Fade Animation
+            elem.classList.remove('text-fade');
+            void elem.offsetWidth; // Trigger reflow
+            elem.classList.add('text-fade');
+
             if (elem.tagName === 'INPUT' || elem.tagName === 'TEXTAREA') {
                 elem.placeholder = translations[lang][key];
             } else {
@@ -122,39 +245,13 @@ function applyLanguage(lang) {
 }
 
 function checkBoot() {
-    const saved = localStorage.getItem('selectedLang');
-    const overlay = document.getElementById('lang-overlay');
-
-    // Fun Text
-    const bootText = document.getElementById('boot-text');
-    if (bootText) {
-        // Random message
-        bootText.innerHTML = bootMessages[Math.floor(Math.random() * bootMessages.length)];
-    }
-
-    if (saved) {
-        if (overlay) overlay.style.display = 'none';
-        applyLanguage(saved);
-        document.body.style.overflow = 'auto';
-    } else {
-        if (overlay) {
-            overlay.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-    }
+    const saved = localStorage.getItem('selectedLang') || 'en'; // Default to EN
+    applyLanguage(saved);
 }
 
-// function toggleExperience() REMOVED
-
-/* --- PROJECT FILTER (ROBUST) --- */
-// function filterProjects(year) { ... } REMOVED
-
+// Ensure globally available
+window.checkBoot = checkBoot;
 window.changeLanguage = setLanguage;
-// window.toggleExp = toggleExperience;
-// window.filterProj = filterProjects;
 
-function confirmSend() {
-    alert(">> MESSAGE TRANSMITTED TO SERVER. [OK]");
-    return true;
-}
-window.confirmSend = confirmSend;
+// Auto-run on load
+document.addEventListener('DOMContentLoaded', checkBoot);
