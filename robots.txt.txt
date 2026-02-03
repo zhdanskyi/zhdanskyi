@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Enlace al mapa del sitio (Versión Vercel)
+Sitemap: https://zhdanskyi-eta.vercel.app/sitemap.xml
