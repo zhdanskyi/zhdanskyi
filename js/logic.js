@@ -10,7 +10,7 @@ const translations = {
         "nav.04": "CONTACTO",
         "cv.nav": "CV DIGITAL",
 
-        "footer.made": "HECHO CON <3 Y CÓDIGO",
+        "footer.made": "PROYECTO PARA LM",
 
         "btn.back": "< VOLVER AL HUB",
         "btn.view": "VER CÓDIGO >>",
@@ -80,7 +80,7 @@ const translations = {
         "nav.04": "CONTACT",
         "cv.nav": "DIGITAL CV",
 
-        "footer.made": "MADE WITH <3 & CODE",
+        "footer.made": "PROJECT FOR LM",
 
         "btn.back": "< BACK TO HUB",
         "btn.view": "VIEW SOURCE >>",
@@ -146,7 +146,7 @@ const translations = {
         "nav.04": "КОНТАКТИ",
         "cv.nav": "ЦИФРОВЕ РЕЗЮМЕ",
 
-        "footer.made": "ЗРОБЛЕНО З <3 ТА КОДОМ",
+        "footer.made": "ЗРОБЛЕНО ДЛЯ ЛМ",
 
         "btn.back": "< НАЗАД ДО ХАБУ",
         "btn.view": "ДИВИТИСЬ КОД >>",
