@@ -248,6 +248,36 @@ function checkBoot() {
     const saved = localStorage.getItem('selectedLang') || 'en'; // Default to EN
     applyLanguage(saved);
 }
+// logica del terminal de navegacion
+
+function toggleNavBot() {
+    const bot = document.getElementById('nav-bot');
+    const icon = document.getElementById('nav-bot-icon');
+    
+    if (bot.classList.contains('bot-cerrado')) {
+        // abrir
+        bot.classList.remove('bot-cerrado');
+        bot.classList.add('bot-abierto');
+        icon.innerText = "X";
+    } else {
+        // cerrar
+        bot.classList.remove('bot-abierto');
+        bot.classList.add('bot-cerrado');
+        icon.innerText = "_";
+    }
+}
+
+function goTo(url) {
+    // vaciamos el chat y ponemos mensaje de carga
+    const body = document.getElementById('nav-bot-body');
+    body.innerHTML = `<p class="bot-text" style="color: #00ffcc;">> Estableciendo conexión cifrada...</p>
+                      <p class="bot-text" style="color: white;">> Redirigiendo...</p>`;
+    
+    // esperamos medio segundo (500ms) para que se vea el efecto y redirigimos
+    setTimeout(() => {
+        window.location.href = url;
+    }, 500);
+}
 
 // Ensure globally available
 window.checkBoot = checkBoot;
