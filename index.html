@@ -31,6 +31,24 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+    <div id="nav-bot" class="bot-cerrado">
+    <div class="bot-header" onclick="toggleNavBot()">
+        <span class="text-green">> NAV_SYS_ONLINE</span>
+        <span id="nav-bot-icon">_</span>
+    </div>
+    
+    <div id="nav-bot-body">
+        <p class="bot-text text-purple">SISTEMA INICIADO.</p>
+        <p class="bot-text">Selecciona un destino de salto:</p>
+        
+        <div class="bot-options">
+            <button onclick="goTo('projects.html')">[1] EJECUTAR: PROYECTOS</button>
+            <button onclick="goTo('colaboradores.html')">[2] EJECUTAR: COLABORADORES</button>
+            <button onclick="goTo('experience.html')">[3] EJECUTAR: EXPERIENCIA</button>
+            <button onclick="goTo('contact.html')">[4] EJECUTAR: CONTACTO</button>
+        </div>
+    </div>
+</div>
 
 <body class="hub-body">
    <!-- Google Tag Manager (noscript) -->
