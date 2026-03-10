@@ -1,4 +1,4 @@
-/* --- FALLING DIGITAL DUST BACKGROUND --- */
+/* polvo digital cayendo en el fondo */
 (function () {
     const canvas = document.createElement('canvas');
     canvas.id = 'dust-canvas';
@@ -7,7 +7,7 @@
     canvas.style.left = '0';
     canvas.style.width = '100%';
     canvas.style.height = '100%';
-    canvas.style.zIndex = '-9999'; // Behind everything
+    canvas.style.zIndex = '-9999'; // detras de todo
     canvas.style.pointerEvents = 'none';
     document.body.appendChild(canvas);
 
@@ -23,17 +23,17 @@
     class Particle {
         constructor() {
             this.x = Math.random() * width;
-            this.y = Math.random() * height; // Start anywhere
-            this.speed = Math.random() * 1.5 + 0.5; // Vertical speed
-            this.size = Math.random() * 2 + 1; // Size variance
-            this.color = Math.random() > 0.8 ? '#6d28d9' : '#00FF00'; // Purple accent or Neon Green
-            this.alpha = Math.random() * 0.3 + 0.1; // Low opacity
+            this.y = Math.random() * height; // iniciar
+            this.speed = Math.random() * 1.5 + 0.5; // velocidad vertical
+            this.size = Math.random() * 2 + 1; // tamano
+            this.color = Math.random() > 0.8 ? '#6d28d9' : '#00FF00'; // color
+            this.alpha = Math.random() * 0.3 + 0.1; // opacidad baja
         }
 
         update() {
             this.y += this.speed;
 
-            // Reset when reaching bottom
+            // reiniciar
             if (this.y > height) {
                 this.y = -5;
                 this.x = Math.random() * width;
@@ -44,7 +44,7 @@
         draw() {
             ctx.fillStyle = this.color;
             ctx.globalAlpha = this.alpha;
-            ctx.fillRect(this.x, this.y, this.size, this.size); // Square pixels
+            ctx.fillRect(this.x, this.y, this.size, this.size); // pintar
             ctx.globalAlpha = 1.0;
         }
     }
@@ -52,7 +52,7 @@
     function init() {
         resize();
         particles = [];
-        const particleCount = Math.floor(width * 0.15); // Density
+        const particleCount = Math.floor(width * 0.15); // densidad
         for (let i = 0; i < particleCount; i++) {
             particles.push(new Particle());
         }

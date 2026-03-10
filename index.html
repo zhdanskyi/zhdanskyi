@@ -1,96 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-</script>
-    </script> <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="msvalidate.01" content="2DE2023ADA924B598EEA0C2B8BA4E5C9" />
+    <meta name="description" content="vitalii zhdanskyi - fullstack developer. portfolio y terminal interactiva.">
+    <meta property="og:title" content="VITALII | PORTFOLIO">
+    <meta property="og:description" content="desarrollo web profesional y programacion a medida.">
+    <meta property="og:image" content="https://zhdanskyi.com/img/profile_pixel.jpg">
+    <meta property="og:url" content="https://zhdanskyi.com/">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Zhdanskyi | FullStack Developer</title>
-    <meta name="description" content="Vitalii Zhdanskyi - Desarrollo web profesional, soluciones digitales y programación a medida. Contacta conmigo para llevar tu proyecto al siguiente nivel.">
-    <!-- Google tag (gtag.js) OLA VUENAS -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2RFRRDCC6P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2RFRRDCC6P');
-</script>
-    
+    <!-- google analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RFRRDCC6P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2RFRRDCC6P');
+    </script>
+    <!-- google tag manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TLDHRBM5');</script>
+    <!-- favicon publico -->
     <link rel="icon" href="img/favicon1.png" type="image/png">
-
     <link rel="canonical" href="https://zhdanskyi.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/matrix.css">
 </head>
 
-
-<body class="hub-body">
-   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLDHRBM5"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-    <!-- frame de cyberpunk  -->
+<body class="matrix-body">
+    <!-- marco tipo cyberpunk -->
     <div class="double-frame"></div>
 
-    <!-- LANGUAGE TOGGLE (FIXED TOP RIGHT) -->
+    <!-- botones de idiomas -->
     <div class="lang-fixed">
         <button class="lang-btn" onclick="changeLanguage('es')">ES</button>
         <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
         <button class="lang-btn" onclick="changeLanguage('ua')">UA</button>
     </div>
 
-    <div class="hub-container">
-        <!-- imagen de perfil -->
-        <div class="hub-left">
-            <img src="img/profile_pixel.jpg" alt="Pixel Portrait" class="hub-portrait">
-        </div>
-
-        <!-- navegacion -->
-        <div class="hub-right">
-            <h1 class="hub-title">
-            <span class="text-white" data-i18n="header.main">VITALII</span> 
-            <span class="text-green" data-i18n="header.sub">ZHDANSKYI</span>
-            <span class="text-white" style="display:block; font-size: 0.5em;">FULL-STACK DEVELOPER</span>
-            </h1>
-            <p class="hub-subtitle" data-i18n="header.bio">> BACKEND & FULL-STACK</p>
-
-            <nav class="hub-menu">
-                <a href="projects.html" class="menu-link" data-i18n="nav.03">PROJECTS</a>
-                <a href="experience.html" class="menu-link" data-i18n="nav.02">EXPERIENCE</a>
-                <a href="contact.html" class="menu-link" data-i18n="nav.04">CONTACT</a>
-                <a href="cv.html" class="menu-link text-purple" data-i18n="cv.nav">DIGITAL CV</a>
-            </nav>
-
-            <div class="site-footer">
-                <div class="footer-socials">
-                    <a href="https://github.com/zhdanskyi" target="_blank"><img src="img/github-pixel.png" alt="GitHub"
-                            class="social-icon"></a>
-                    <a href="https://linkedin.com/in/zhdanskyi" target="_blank"><img src="img/linkedin-pixel.png"
-                            alt="LinkedIn" class="social-icon"></a>
-                    <a href="mailto:zhdanskyibusiness@gmail.com"><img src="img/email-pixel.png" alt="Email"
-                            class="social-icon"></a>
-                    <a href="https://instagram.com" target="_blank"><img src="img/instagram-pixel.png" alt="Instagram"
-                            class="social-icon"></a>
-                </div>
-                <p class="footer-copy">© 2026 VITALII ZHDANSKYI | <span data-i18n="footer.made">PROJECT FOR LM
-                            </span>
-                </p>
+    <!-- layout cyber hub centrado -->
+    <div class="cyber-wrapper">
+        
+        <!-- cabecera centralizada -->
+        <header class="cyber-header">
+            <div class="cyber-avatar-box">
+                <img src="img/profile_pixel.jpg" alt="retrato pixel vitalii zhdanskyi" class="cyber-avatar">
             </div>
+            
+            <h1 class="cyber-title">
+                <span data-i18n="header.main">VITALII</span> <span style="color: var(--neon-purple);" data-i18n="header.sub">ZHDANSKYI</span>
+            </h1>
+            <p class="cyber-subtitle" data-i18n="header.bio">> BACKEND & FULL-STACK</p>
+        </header>
+
+        <!-- navegacion horizontal como 'pestañas' -->
+        <div class="cyber-nav-container">
+            <nav class="cyber-nav">
+                <a href="projects.html" class="cyber-link" data-i18n="nav.03">[ PROYECTOS ]</a>
+                <a href="experience.html" class="cyber-link" data-i18n="nav.02">[ EXPERIENCIA ]</a>
+                <a href="contact.html" class="cyber-link" data-i18n="nav.04">[ CONTACTO ]</a>
+                <a href="cv.html" class="cyber-link glow-purple" data-i18n="cv.nav">[ DIGITAL_CV ]</a>
+            </nav>
         </div>
+
+        <!-- terminal chatbot inmenso abajo -->
+        <main class="cyber-main">
+            <div class="terminal-window">
+                <div class="terminal-header-bar">
+                    <div class="terminal-buttons">
+                        <span class="btn-close"></span>
+                        <span class="btn-min"></span>
+                        <span class="btn-max"></span>
+                    </div>
+                    <div class="terminal-path">root@zhdanskyi:/sys/chatbot_v2# _</div>
+                </div>
+                
+                <div class="terminal-body-area" id="chat-output">
+                    <div class="boot-sequence">
+                        <p class="sys-msg">> iniciando hub interactivo...</p>
+                        <p class="sys-msg">> enlazando componentes modulares...</p>
+                        <p class="bot-msg">> terminal online. escribe <span style="color:#fff">'ayuda'</span> para empezar a navegar o usa el menú superior.</p>
+                    </div>
+                </div>
+                
+                <div class="terminal-input-bar">
+                    <span class="prompt-arrow">></span>
+                    <input type="text" id="chat-input" class="cmd-input" autocomplete="off" autofocus spellcheck="false" placeholder="ingresa comando...">
+                    <span class="blinking-cursor">_</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- pie de pagina minimalista -->
+        <footer class="cyber-footer">
+            <div class="matrix-socials">
+                <a href="https://github.com/zhdanskyi" target="_blank"><img src="img/github-pixel.png" alt="GitHub" class="social-icon"></a>
+                <a href="https://linkedin.com/in/zhdanskyi" target="_blank"><img src="img/linkedin-pixel.png" alt="LinkedIn" class="social-icon"></a>
+                <a href="mailto:zhdanskyibusiness@gmail.com"><img src="img/email-pixel.png" alt="Email" class="social-icon"></a>
+            </div>
+            <p class="footer-text">© 2026 VITALII ZHDANSKYI | <span data-i18n="footer.made">PROYECTO PARA LM</span></p>
+        </footer>
+        
     </div>
 
-    <script src="js/background.js"></script>
-    <script src="js/logic.js"></script>
+    <!-- scripts -->
+    <script src="js/background.js" defer></script>
+    <script src="js/logic.js" defer></script>
 </body>
-
 </html>

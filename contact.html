@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contacta con vitalii zhdanskyi">
+    <meta property="og:title" content="VITALII | CONTACT">
+    <meta property="og:description" content="formulario de contacto de vitalii zhdanskyi">
+    <meta property="og:image" content="https://zhdanskyi.com/img/profile_pixel.jpg">
+    <meta property="og:url" content="https://zhdanskyi.com/contact.html">
+    <meta name="twitter:card" content="summary_large_image">
     <title>VITALII | CONTACT</title>
-    <!-- FAVICON -->
+    <!-- favicon -->
     <link rel="icon" href="img/favicon1.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap"
         rel="stylesheet">
@@ -14,8 +20,8 @@
 
 <body class="sub-page">
 
-    <!-- SUB PAGE NAV -->
-    <div class="sub-nav">
+    <!-- navegacion secundaria -->
+    <header class="sub-nav">
         <a href="index.html" class="btn-back" data-i18n="btn.back">
             < HUB</a>
 
@@ -24,7 +30,7 @@
                     <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
                     <button class="lang-btn" onclick="changeLanguage('ua')">UA</button>
                 </div>
-    </div>
+    </header>
 
     <main class="content-container"
         style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 50vh;">
@@ -80,7 +86,8 @@
         </p>
     </footer>
 
-    <script src="js/logic.js"></script>
+    <!-- carga diferida del script para mejor seo -->
+    <script src="js/logic.js" defer></script>
 </body>
 
 </html>

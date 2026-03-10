@@ -16,12 +16,12 @@ const translations = {
         "btn.view": "VER CÓDIGO >>",
         "btn.demo": "DEMO EN VIVO >>",
 
-        /* --- PROJECTS --- */
+        /* proyectos */
         "proj.1.desc": "Arquitectura de microservicios manejando 10k+ req/sec. Caché avanzado con Redis y mensajería asíncrona vía Kafka.",
         "proj.2.desc": "Script de automatización para envío de propuestas y filtrado de trabajos. Reduce la carga manual un 80%.",
         "proj.3.desc": "Este sitio web. Una arquitectura MPA pura centrada en rendimiento y estética retro.",
 
-        /* --- EXPERIENCE --- */
+        /* experiencia */
         "exp.role1": "JAVA BACKEND DEVELOPER",
         "exp.role1.time": "2025 - ACTUALIDAD",
         "exp.desc1": "Desarrollo de lógica de negocio compleja: sistemas CRUD avanzados y simulación de arquitectura bancaria segura (transacciones, concurrencia, seguridad).",
@@ -34,7 +34,7 @@ const translations = {
         "exp.role3.time": "2023 - 2024 | UPWORK",
         "exp.desc3": "Automatización de flujos de trabajo. Desarrollo de Telegram Bots interactivos y consumo de APIs externas para clientes internacionales.",
 
-        /* --- CONTACT --- */
+        /* contacto */
         "cont.name": "> IDENTIFÍCATE (NOMBRE):",
         "cont.name.ph": "_Tu Nombre",
         "cont.email": "> CANAL DE COMUNICACIÓN (EMAIL):",
@@ -45,7 +45,7 @@ const translations = {
         "cont.or": "O ESTABLECE ENLACE DIRECTO:",
         "cont.wa": "ENLACE ENCRIPTADO WHATSAPP >>",
 
-        /* --- CV SPECIFIC --- */
+        /* especifico de cv */
         "cv.title": "CV DIGITAL",
 
         "cv.summary.title": ">> PERFIL DEL SISTEMA",
@@ -212,7 +212,7 @@ function applyLanguage(lang) {
     if (!translations[lang]) return;
     document.body.className = lang + (document.body.classList.contains('hub-body') ? ' hub-body' : ' sub-page');
 
-    // UPDATE BUTTON STATES
+    // actualizar botones
     document.querySelectorAll('.lang-btn').forEach(btn => {
         if (btn.innerText.toLowerCase() === lang) {
             btn.classList.add('active');
@@ -221,18 +221,18 @@ function applyLanguage(lang) {
         }
     });
 
-    // UPDATE TITLE
+    // actualizar titulo
     if (translations[lang]["meta.title"]) {
         document.title = translations[lang]["meta.title"];
     }
 
-    // UPDATE TEXT ELEMENTS
+    // actualizar textos
     document.querySelectorAll('[data-i18n]').forEach(elem => {
         const key = elem.getAttribute('data-i18n');
         if (translations[lang][key]) {
-            // Apply Fade Animation
+            // aplicar animacion
             elem.classList.remove('text-fade');
-            void elem.offsetWidth; // Trigger reflow
+            void elem.offsetWidth; // reflow
             elem.classList.add('text-fade');
 
             if (elem.tagName === 'INPUT' || elem.tagName === 'TEXTAREA') {
@@ -245,7 +245,7 @@ function applyLanguage(lang) {
 }
 
 function checkBoot() {
-    const saved = localStorage.getItem('selectedLang') || 'en'; // Default to EN
+    const saved = localStorage.getItem('selectedLang') || 'en'; // por defecto en ingles
     applyLanguage(saved);
 }
 // logica del terminal de navegacion
@@ -268,20 +268,93 @@ function toggleNavBot() {
 }
 
 function goTo(url) {
-    // vaciamos el chat y ponemos mensaje de carga
-    const body = document.getElementById('nav-bot-body');
-    body.innerHTML = `<p class="bot-text" style="color: #00ffcc;">> Estableciendo conexión cifrada...</p>
-                      <p class="bot-text" style="color: white;">> Redirigiendo...</p>`;
+    // mensaje de carga en el terminal nativo
+    const output = document.getElementById('chat-output');
+    if (output) {
+        const p1 = document.createElement('p');
+        p1.className = 'bot-msg';
+        p1.style.color = 'var(--neon-green)';
+        p1.innerText = '> estableciendo conexion cifrada...';
+        output.appendChild(p1);
+        
+        const p2 = document.createElement('p');
+        p2.className = 'bot-msg';
+        p2.style.color = '#fff';
+        p2.innerText = '> redirigiendo...';
+        output.appendChild(p2);
+        
+        output.scrollTop = output.scrollHeight;
+    }
     
-    // esperamos medio segundo (500ms) para que se vea el efecto y redirigimos
+    // esperamos medio segundo y redirigimos
     setTimeout(() => {
         window.location.href = url;
     }, 500);
 }
 
-// Ensure globally available
+// exponer globalmente
 window.checkBoot = checkBoot;
 window.changeLanguage = setLanguage;
 
-// Auto-run on load
-document.addEventListener('DOMContentLoaded', checkBoot);
+// logica del chatbot nativo
+function initChatbot() {
+    const input = document.getElementById('chat-input');
+    const output = document.getElementById('chat-output');
+    if (!input || !output) return;
+
+    input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' && this.value.trim() !== '') {
+            const cmd = this.value.trim().toLowerCase();
+            
+            // mostrar comando del usuario
+            const userP = document.createElement('p');
+            userP.className = 'user-msg';
+            userP.innerText = `root@zhdanskyi:~# ${cmd}`;
+            output.appendChild(userP);
+            
+            this.value = '';
+            
+            // procesar comando
+            setTimeout(() => {
+                const botP = document.createElement('p');
+                botP.className = 'bot-msg';
+                botP.innerText = getBotResponse(cmd);
+                output.appendChild(botP);
+                output.scrollTop = output.scrollHeight;
+            }, 300);
+        }
+    });
+}
+
+function getBotResponse(cmd) {
+    if (cmd === 'ayuda' || cmd === 'help') {
+        return "> comandos disponibles: quien eres, proyectos, contacto, limpiar";
+    }
+    if (cmd === 'quien eres' || cmd === 'whoami') {
+        return "> soy vitalii zhdanskyi, desarrollador full-stack especializado en backend y microservicios. escribo codigo para sobrevivir en la matrix.";
+    }
+    if (cmd === 'proyectos') {
+        return "> accediendo a la base de datos de proyectos... escribe 'nav proyectos' para navegar a la seccion, o usa el menu superior.";
+    }
+    if (cmd === 'contacto') {
+        return "> enlace de comunicaciones: usa el menu superior o envia un mail a zhdanskyibusiness@gmail.com";
+    }
+    if (cmd === 'limpiar' || cmd === 'clear') {
+        const output = document.getElementById('chat-output');
+        if (output) output.innerHTML = '';
+        return "> terminal reiniciada.";
+    }
+    if (cmd.startsWith('nav ')) {
+        const page = cmd.split(' ')[1];
+        if (page === 'proyectos') { goTo('projects.html'); return '> redirigiendo a proyectos...'; }
+        else if (page === 'experiencia') { goTo('experience.html'); return '> redirigiendo a experiencia...'; }
+        else if (page === 'contacto') { goTo('contact.html'); return '> redirigiendo a contacto...'; }
+    }
+    return "> comando no reconocido. escribe 'ayuda' para ver las opciones validas.";
+}
+
+// auto ejecutar al cargar
+document.addEventListener('DOMContentLoaded', () => {
+    checkBoot();
+    initChatbot();
+});

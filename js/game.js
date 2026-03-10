@@ -3,23 +3,23 @@ const canvas = document.getElementById('gameCanvas');
 if (canvas) {
     const ctx = canvas.getContext('2d');
 
-    // --- Responsive Canvas ---
+    // lona responsiva
     function resizeCanvas() {
         const parent = canvas.parentElement;
         canvas.width = parent.clientWidth;
         canvas.height = 300;
-        // Re-scale logic could go here if drawing depended heavily on absolute pixels
+        // logica de reescalado
     }
     window.addEventListener('resize', resizeCanvas);
-    resizeCanvas(); // Init
+    resizeCanvas(); // iniciar
 
-    // --- Stats ---
+    // estadisticas
     let frameId;
     let score = 0;
     let isPlaying = false;
     let gameSpeed = 5;
 
-    // --- Entities ---
+    // entidades
     const dino = {
         x: 50,
         y: 200,
@@ -34,12 +34,12 @@ if (canvas) {
     let obstacles = [];
     let spawnTimer = 0;
 
-    // --- UI Elements ---
+    // elementos de ui
     const scoreEl = document.getElementById('score-display');
     const startOverlay = document.getElementById('start-overlay');
     const startBtn = document.getElementById('start-btn');
 
-    // --- Game Logic ---
+    // logica del juego
     function startGame() {
         if (isPlaying) return;
         isPlaying = true;
@@ -68,11 +68,11 @@ if (canvas) {
     }
 
     function update() {
-        // Physics
+        // fisicas
         dino.dy += dino.gravity;
         dino.y += dino.dy;
 
-        // Ground
+        // suelo
         if (dino.y > 250) {
             dino.y = 250;
             dino.dy = 0;
@@ -81,9 +81,9 @@ if (canvas) {
             dino.grounded = false;
         }
 
-        // Spawn
+        // generacion
         spawnTimer++;
-        if (spawnTimer > Math.random() * 50 + (1000 / gameSpeed)) { // Rough random timer
+        if (spawnTimer > Math.random() * 50 + (1000 / gameSpeed)) { // aleatorio
             obstacles.push({
                 x: canvas.width,
                 y: 250,
@@ -93,12 +93,12 @@ if (canvas) {
             spawnTimer = 0;
         }
 
-        // Obstacles
+        // obstaculos
         for (let i = obstacles.length - 1; i >= 0; i--) {
             let obs = obstacles[i];
             obs.x -= gameSpeed;
 
-            // Collision
+            // colision
             if (
                 dino.x < obs.x + obs.w &&
                 dino.x + dino.w > obs.x &&
@@ -108,34 +108,34 @@ if (canvas) {
                 gameOver();
             }
 
-            // Cleanup & Score
+            // limpieza
             if (obs.x + obs.w < 0) {
                 obstacles.splice(i, 1);
                 score += 10;
                 scoreEl.innerText = 'SCORE: ' + score;
-                gameSpeed += 0.005; // Slow accel
+                gameSpeed += 0.005; // acelerar
             }
         }
     }
 
     function draw() {
-        // Clear
+        // limpiar
         ctx.fillStyle = '#000000';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        // Floor
+        // piso
         ctx.strokeStyle = '#004400';
         ctx.beginPath();
         ctx.moveTo(0, 280);
         ctx.lineTo(canvas.width, 280);
         ctx.stroke();
 
-        // Dino (Green)
+        // dinosaurio verde
         ctx.fillStyle = '#00FF00';
         ctx.fillRect(dino.x, dino.y, dino.w, dino.h);
 
-        // Obstacles (Red/Code Blocks)
-        ctx.fillStyle = '#ff3333'; // Red for danger/bugs in this mode for contrast
+        // obstaculos
+        ctx.fillStyle = '#ff3333'; // rojo alto contraste
         obstacles.forEach(obs => {
             ctx.fillRect(obs.x, obs.y, obs.w, obs.h);
         });
@@ -148,7 +148,7 @@ if (canvas) {
         frameId = requestAnimationFrame(loop);
     }
 
-    // --- Inputs ---
+    // controles
     startBtn.addEventListener('click', startGame);
 
     window.addEventListener('keydown', e => {
