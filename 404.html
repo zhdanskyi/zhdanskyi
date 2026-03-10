@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, follow"> <!-- Evitar indexar errores -->
-    <title>Error 404 - Sistema no encontrado</title>
+    <!-- evitar indexar pagina de errores -->
+    <meta name="robots" content="noindex, follow">
+    <title>error 404 - sistema no encontrado</title>
     <style>
         body {
             background-color: #050505;
@@ -35,7 +36,7 @@
             box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
             position: relative;
         }
-        /* Botones decorativos de terminal */
+        /* botones decorativos de terminal */
         .terminal-404::before {
             content: "";
             position: absolute;
@@ -80,13 +81,15 @@
         <p style="text-align: left; color: #ff5f56;">> FATAL: El archivo o directorio solicitado no existe.</p>
         <p style="text-align: left;">> Iniciando protocolo de salto de seguridad...</p>
         <br>
-        <p>> Reubicando a la raíz del sistema en <span id="countdown" style="font-weight: bold; color: #fff;">5</span> segundos<span class="blinking-cursor">_</span></p>
+        <p>> Reubicando a la raiz del sistema en <span id="countdown" style="font-weight: bold; color: #fff;">5</span> segundos<span class="blinking-cursor">_</span></p>
         
-        <a href="/" class="link-manual">[ ACCIÓN MANUAL: VOLVER A DIRECTORIO RAÍZ ]</a>
+        <!-- enlace semantico para navegacion crawleable -->
+        <a href="index.html" class="link-manual">[ ACCION MANUAL: VOLVER A DIRECTORIO RAIZ ]</a>
     </div>
 
-    <script>
-        // Lógica de redirección a los 5 segundos
+    <!-- script aplazado por normas seo extremas -->
+    <script defer>
+        // logica de redireccion a los 5 segundos
         let timeLeft = 5;
         const countdownEl = document.getElementById('countdown');
         const timer = setInterval(() => {
@@ -94,7 +97,7 @@
             countdownEl.textContent = timeLeft;
             if (timeLeft <= 0) {
                 clearInterval(timer);
-                window.location.href = '/'; // Redirección al index
+                window.location.href = 'index.html'; // redireccion al index
             }
         }, 1000);
     </script>

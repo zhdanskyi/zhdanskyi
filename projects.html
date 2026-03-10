@@ -1,41 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="proyectos de vitalii zhdanskyi - desarrollo web">
-    <meta property="og:title" content="VITALII | PROJECTS">
+    <meta name="description" content="proyectos de desarrollo web y backend de vitalii zhdanskyi">
+    <meta property="og:title" content="VITALII | PROYECTOS">
     <meta property="og:description" content="proyectos de desarrollo web backend y frontend">
     <meta property="og:image" content="https://zhdanskyi.com/img/profile_pixel.jpg">
     <meta property="og:url" content="https://zhdanskyi.com/projects.html">
     <meta name="twitter:card" content="summary_large_image">
-    <title>VITALII | PROJECTS</title>
-    <!-- favicon -->
+    <title>vitalii | proyectos</title>
+    
+    <!-- favicon publico -->
     <link rel="icon" href="img/favicon1.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/matrix.css">
 </head>
 
 <body class="sub-page">
 
-    <!-- navegacion secundaria -->
-    <header class="sub-nav">
-        <a href="index.html" class="btn-back" data-i18n="btn.back">
-            < HUB</a>
+    <!-- navegacion secundaria con enlaces semanticos -->
+    <header class="sub-nav" style="flex-wrap: wrap; gap: 10px;">
+        <nav class="cyber-nav" style="font-size: 0.8rem;">
+            <a href="index.html" class="cyber-link">[ INICIO ]</a>
+            <a href="projects.html" class="cyber-link" data-i18n="nav.03">[ PROYECTOS ]</a>
+            <a href="experience.html" class="cyber-link" data-i18n="nav.02">[ EXPERIENCIA ]</a>
+            <a href="colaboradores.html" class="cyber-link">[ COLABORADORES ]</a>
+            <a href="contact.html" class="cyber-link" data-i18n="nav.04">[ CONTACTO ]</a>
+            <a href="cv.html" class="cyber-link glow-purple" data-i18n="cv.nav">[ DIGITAL_CV ]</a>
+        </nav>
 
-                <div class="lang-fixed">
-                    <button class="lang-btn" onclick="changeLanguage('es')">ES</button>
-                    <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
-                    <button class="lang-btn" onclick="changeLanguage('ua')">UA</button>
-                </div>
+        <div class="lang-fixed">
+            <button class="lang-btn" onclick="changeLanguage('es')">ES</button>
+            <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+            <button class="lang-btn" onclick="changeLanguage('ua')">UA</button>
+        </div>
     </header>
 
     <main class="content-container">
 
         <div class="page-header">
-            <h1 class="page-title" data-i18n="nav.03">PROJECTS</h1>
+            <h1 class="page-title" data-i18n="nav.03">PROYECTOS</h1>
         </div>
 
         <div class="card-grid">
@@ -48,7 +56,7 @@
                     Microservices architecture handling 10k+ req/sec. Features advanced caching with Redis and async
                     messaging via Kafka.
                 </p>
-                <a href="https://github.com/zhdanskyi" target="_blank" class="btn-link" data-i18n="btn.view">VIEW SOURCE
+                <a href="https://github.com/zhdanskyi" target="_blank" class="btn-link" data-i18n="btn.view">VER CODIGO
                     >></a>
             </article>
 
@@ -59,7 +67,7 @@
                 <p class="card-desc" data-i18n="proj.2.desc">
                     Automation script for proposal submission and job filtering. Reduces manual overhead by 80%.
                 </p>
-                <a href="https://github.com/zhdanskyi" target="_blank" class="btn-link" data-i18n="btn.view">VIEW SOURCE
+                <a href="https://github.com/zhdanskyi" target="_blank" class="btn-link" data-i18n="btn.view">VER CODIGO
                     >></a>
             </article>
 
@@ -70,24 +78,25 @@
                 <p class="card-desc" data-i18n="proj.3.desc">
                     This website. A pure vanilla MPA architecture focusing on performance and retro aesthetics.
                 </p>
-                <a href="#" class="btn-link" data-i18n="btn.demo">LIVE DEMO >></a>
+                <a href="#" class="btn-link" data-i18n="btn.demo">VER DEMO >></a>
             </article>
 
         </div>
     </main>
 
+    <!-- pie de pagina minimalista -->
     <footer class="site-footer">
         <div class="footer-socials">
-            <a href="https://github.com/zhdanskyi" target="_blank"><img src="img/github-pixel.png" alt="GitHub"
+            <a href="https://github.com/zhdanskyi" target="_blank"><img src="img/github-pixel.png" alt="github icono"
                     class="social-icon"></a>
-            <a href="https://linkedin.com/in/zhdanskyi" target="_blank"><img src="img/linkedin-pixel.png" alt="LinkedIn"
+            <a href="https://linkedin.com/in/zhdanskyi" target="_blank"><img src="img/linkedin-pixel.png" alt="linkedin icono"
                     class="social-icon"></a>
-            <a href="mailto:zhdanskyibusiness@gmail.com"><img src="img/email-pixel.png" alt="Email"
+            <a href="mailto:zhdanskyibusiness@gmail.com"><img src="img/email-pixel.png" alt="email icono"
                     class="social-icon"></a>
-            <a href="https://instagram.com" target="_blank"><img src="img/instagram-pixel.png" alt="Instagram"
+            <a href="https://instagram.com" target="_blank"><img src="img/instagram-pixel.png" alt="instagram icono"
                     class="social-icon"></a>
         </div>
-        <p class="footer-copy">© 2025 VITALII ZHDANSKYI | <span data-i18n="footer.made">MADE WITH <3 & CODE</span>
+        <p class="footer-copy">© 2026 VITALII ZHDANSKYI | <span data-i18n="footer.made">HECHO CON CODIGO</span>
         </p>
     </footer>
 
