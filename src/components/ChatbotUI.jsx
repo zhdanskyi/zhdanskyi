@@ -1,0 +1,125 @@
+// chatbot interactivo flotante
+import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const ChatbotUI = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [inputVal, setInputVal] = useState('');
+  const [messages, setMessages] = useState([
+    { type: 'sys', text: '> iniciando hub interactivo...' },
+    { type: 'sys', text: '> enlazando componentes modulares...' },
+    { type: 'bot', text: '> terminal online. escribe \'ayuda\' para empezar a navegar o usa el menu superior.', isHtml: true }
+  ]);
+  const endRef = useRef(null);
+  const navigate = useNavigate();
+
+  // auto scroll en la historia de comandos
+  useEffect(() => {
+    if (isOpen) {
+      endRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages, isOpen]);
+
+  const handleCommand = (cmd) => {
+    const c = cmd.toLowerCase().trim();
+    if (c === 'ayuda' || c === 'help') return "> comandos disponibles: quien eres, proyectos, contacto, limpiar";
+    if (c === 'quien eres' || c === 'whoami') return "> soy vitalii zhdanskyi, desarrollador full-stack especializado en backend y microservicios. escribo codigo para sobrevivir en la matrix.";
+    if (c === 'proyectos') return "> accediendo a la base de datos de proyectos... escribe 'nav proyectos' para navegar a la seccion, o usa el menu superior.";
+    if (c === 'contacto') return "> enlace de comunicaciones: usa el menu superior o envia un mail a zhdanskyibusiness@gmail.com";
+    if (c === 'limpiar' || c === 'clear') {
+      setMessages([]);
+      return "> terminal reiniciada.";
+    }
+    if (c.startsWith('nav ')) {
+      const page = c.split(' ')[1];
+      if (page === 'proyectos') { goTo('/proyectos'); return '> redirigiendo a proyectos...'; }
+      if (page === 'experiencia') { goTo('/experiencia'); return '> redirigiendo a experiencia...'; }
+      if (page === 'contacto') { goTo('/contacto'); return '> redirigiendo a contacto...'; }
+    }
+    return "> comando no reconocido. escribe 'ayuda' para ver las opciones validas.";
+  };
+
+  const goTo = (url) => {
+    setMessages(prev => [
+      ...prev,
+      { type: 'bot', text: '> estableciendo conexion cifrada...', color: '#00FF00' },
+      { type: 'user', text: '> redirigiendo...', color: '#fff' }
+    ]);
+    setTimeout(() => {
+      navigate(url);
+    }, 500);
+  };
+
+  const onKeyDown = (e) => {
+    if (e.key === 'Enter' && inputVal.trim() !== '') {
+      const currentCmd = inputVal;
+      setMessages(prev => [...prev, { type: 'user', text: `root@zhdanskyi:~# ${currentCmd}` }]);
+      setInputVal('');
+      
+      setTimeout(() => {
+        const response = handleCommand(currentCmd);
+        if (response) {
+            if (response === '> terminal reiniciada.') return; 
+            setMessages(prev => [...prev, { type: 'bot', text: response }]);
+        }
+      }, 300);
+    }
+  };
+
+  return (
+    <>
+      <button 
+        onClick={() => setIsOpen(!isOpen)} 
+        className="fixed bottom-6 right-6 w-14 h-14 bg-[#0a0a0a] border border-neon-green rounded-full shadow-[0_0_15px_#00ff00] flex items-center justify-center z-[100] hover:bg-neon-green hover:bg-opacity-20 transition-all duration-300 group"
+        aria-label="abrir asistente virtual"
+      >
+        <span className="text-neon-green text-xl font-mono group-hover:scale-110 transition-transform select-none">&gt;_</span>
+      </button>
+
+      {isOpen && (
+        <div className="fixed bottom-24 right-6 z-[99] animate-fade-in w-[90vw] max-w-[400px]">
+          <div id="chatbot-interface" data-chatbot="true" role="log" aria-live="polite" aria-label="Asistente de comandos interactivo" className="w-full h-[350px] bg-terminal-bg border border-neon-green rounded shadow-terminal flex flex-col relative bg-scanlines overflow-hidden">
+            {/* barra de control estilo terminal linux */}
+            <div className="bg-[#111] py-3 px-4 flex items-center justify-center border-b border-neon-green relative z-10">
+              <div className="flex gap-2 absolute left-4">
+                <button onClick={() => setIsOpen(false)} aria-label="cerrar terminal" className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors cursor-pointer"></button>
+                <span className="btn-min"></span>
+                <span className="btn-max"></span>
+              </div>
+              <div className="font-body text-[#666] text-[0.85rem]">root@zhdanskyi:/sys/chatbot# _</div>
+            </div>
+
+            {/* log de mensajes del historial interactivo */}
+            <div className="flex-grow p-4 overflow-y-auto font-body text-[0.9rem] leading-relaxed z-10 flex flex-col items-start text-left">
+              {messages.map((m, i) => (
+                <p key={i} className={`mb-1 w-full break-words ${m.type === 'sys' ? 'text-[#888]' : m.type === 'bot' ? 'text-neon-green' : 'text-white'}`} style={m.color ? {color: m.color} : {}}>
+                  {m.isHtml ? <span dangerouslySetInnerHTML={{ __html: m.text.replace("'ayuda'", "<span style='color:#fff'>'ayuda'</span>") }} /> : m.text}
+                </p>
+              ))}
+              <div ref={endRef} />
+            </div>
+
+            {/* imput para comandos directos */}
+            <div className="flex items-center justify-start py-3 px-4 bg-[#0a0a0a] border-t border-dashed border-[#333] z-10">
+              <span className="text-neon-purple mr-3 font-bold">&gt;</span>
+              <input 
+                type="text" 
+                value={inputVal}
+                onChange={e => setInputVal(e.target.value)}
+                onKeyDown={onKeyDown}
+                className="bg-transparent border-none text-white font-body text-[0.9rem] flex-grow outline-none text-left"
+                autoComplete="off" 
+                autoFocus 
+                spellCheck="false"
+                placeholder="ingresa comando..."
+              />
+              <span className="blinking-cursor text-neon-green font-bold">_</span>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default ChatbotUI;

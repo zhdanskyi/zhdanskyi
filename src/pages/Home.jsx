@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '../context/LanguageContext';
 import Navigation from '../components/Navigation';
-import TerminalBot from '../components/TerminalBot';
+import ChatbotUI from '../components/ChatbotUI';
 import Footer from '../components/Footer';
 
 const Home = () => {
@@ -69,8 +69,8 @@ const Home = () => {
             </p>
         </div>
 
-        <main id="main-content" className="w-full max-w-[650px] flex-none flex flex-col mb-4 scale-[0.95] origin-top">
-          <TerminalBot />
+        <main id="main-content" className="w-full max-w-[650px] flex-none flex flex-col scale-[0.95] origin-top">
+          <ChatbotUI />
         </main>
 
         <Footer />
