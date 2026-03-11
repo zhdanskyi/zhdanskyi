@@ -67,7 +67,7 @@ const ChatbotUI = () => {
   };
 
   return (
-    <>
+    <div id="chatbot" role="complementary" aria-label="Asistente virtual Zhdanskyi" data-testid="chatbot-component">
       <button 
         onClick={() => setIsOpen(!isOpen)} 
         className="fixed bottom-10 right-10 w-14 h-14 bg-power-box dark:bg-[#0a0a0a] border border-power-highlight dark:border-neon-green flex items-center justify-center z-[100] hover:bg-power-highlight/20 dark:hover:bg-neon-green/20 transition-all duration-300 group"
@@ -79,7 +79,7 @@ const ChatbotUI = () => {
 
       {isOpen && (
         <div className="fixed bottom-28 right-10 z-[99] animate-fade-in w-[90vw] max-w-[400px]">
-          <div id="chatbot" role="complementary" aria-label="Asistente virtual Zhdanskyi" data-testid="chatbot-component" className="w-full h-[350px] bg-power-box/95 dark:bg-terminal-bg border border-power-highlight dark:border-neon-green shadow-[0_0_15px_rgba(133,227,255,0.15)] dark:shadow-terminal flex flex-col relative bg-scanlines overflow-hidden">
+          <div className="w-full h-[350px] bg-power-box/95 dark:bg-terminal-bg border border-power-highlight dark:border-neon-green shadow-[0_0_15px_rgba(133,227,255,0.15)] dark:shadow-terminal flex flex-col relative bg-scanlines overflow-hidden">
             <span className="sr-only">Chatbot interactivo activo para asistencia al usuario</span>
             {/* barra de control estilo terminal linux pura sin dots de mac */}
             <div className="bg-power-bg dark:bg-[#111] py-2 px-4 flex items-center justify-between border-b border-power-highlight dark:border-neon-green relative z-10">
@@ -116,7 +116,7 @@ const ChatbotUI = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

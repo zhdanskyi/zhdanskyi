@@ -26,15 +26,15 @@ const Footer = () => {
                 <span>|</span>
                 <a href="https://react.dev" target="_blank" rel="noopener" className="hover:text-[#61dafb] transition-colors duration-300">React Oficial</a>
             </div>
-            <div className="flex gap-6">
-                <a href="https://github.com/zhdanskyi" target="_blank" rel="noreferrer">
-                    <img src="/img/github-pixel.png" alt="github" className="w-8 h-8 object-contain transition-all duration-300 filter grayscale brightness-200 hover:filter-none hover:drop-shadow-[0_0_8px_#00ff00] hover:scale-110" />
+            <div className="flex gap-6 items-center justify-center">
+                <a href="https://github.com/zhdanskyi" target="_blank" rel="noreferrer" className="font-head text-power-text dark:text-[#aaa] hover:text-power-highlight dark:hover:text-neon-green transition-colors text-sm hover:scale-110">
+                    [ GH ]
                 </a>
-                <a href="https://linkedin.com/in/zhdanskyi" target="_blank" rel="noreferrer">
-                    <img src="/img/linkedin-pixel.png" alt="linkedin" className="w-8 h-8 object-contain transition-all duration-300 filter grayscale brightness-200 hover:filter-none hover:drop-shadow-[0_0_8px_#00ff00] hover:scale-110" />
+                <a href="https://linkedin.com/in/zhdanskyi" target="_blank" rel="noreferrer" className="font-head text-power-text dark:text-[#aaa] hover:text-power-highlight dark:hover:text-neon-green transition-colors text-sm hover:scale-110">
+                    [ IN ]
                 </a>
-                <a href="mailto:zhdanskyibusiness@gmail.com">
-                    <img src="/img/email-pixel.png" alt="email" className="w-8 h-8 object-contain transition-all duration-300 filter grayscale brightness-200 hover:filter-none hover:drop-shadow-[0_0_8px_#00ff00] hover:scale-110" />
+                <a href="mailto:zhdanskyibusiness@gmail.com" className="font-head text-power-text dark:text-[#aaa] hover:text-power-highlight dark:hover:text-neon-green transition-colors text-sm hover:scale-110">
+                    [ @ ]
                 </a>
             </div>
             <p className="uppercase mt-2">© 2026 VITALII ZHDANSKYI | <span className="fade-in">{t('footer.made')}</span></p>
