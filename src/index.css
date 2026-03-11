@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white font-body;
+  }
+}
+
+@layer utilities {
+  .bg-matrix {
+    background-image: theme('backgroundImage.matrix-pattern');
+    background-size: 20px 20px;
+  }
+  
+  .bg-scanlines::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: theme('backgroundImage.terminal-scanlines');
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+  }
+
+  .text-shadow-neon {
+    text-shadow: 0 0 6px theme('colors.neon-green');
+  }
+
+  .text-shadow-purple {
+    text-shadow: 0 0 12px theme('colors.neon-purple'), 0 0 25px rgba(109, 40, 217, 0.4);
+  }
+
+  .border-glow-green {
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.2);
+  }
+  
+  .border-glow-green:hover {
+    box-shadow: 0 0 18px theme('colors.neon-green'), inset 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Animaciones custom de los estilos antiguos */
+  .blinking-cursor {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  .rotate-border::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border: 2px dashed theme('colors.neon-purple');
+    animation: rotate-border 10s linear infinite;
+    border-radius: 5px;
+  }
+
+  @keyframes rotate-border {
+    100% { transform: rotate(360deg); }
+  }
+
+  .glitch-anim {
+    animation: glitch-select 0.3s linear;
+  }
+
+  @keyframes glitch-select {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-1px, 1px); }
+    80% { transform: translate(1px, -1px); }
+    100% { transform: translate(0); }
+  }
+
+  .fade-in {
+    animation: fadeTransition 0.3s ease-in-out;
+  }
+
+  @keyframes fadeTransition {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .double-frame {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    pointer-events: none;
+  }
+  .double-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid theme('colors.neon-green');
+  }
+  .double-frame::after {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid theme('colors.neon-green');
+  }
+  
+  /* terminal buttons */
+  .btn-close { @apply w-3 h-3 rounded-full bg-error-red; }
+  .btn-min { @apply w-3 h-3 rounded-full bg-warn-yellow; }
+  .btn-max { @apply w-3 h-3 rounded-full bg-success-green; }
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: theme('colors.dark-box');
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.neon-purple');
+}
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.neon-green');
+}

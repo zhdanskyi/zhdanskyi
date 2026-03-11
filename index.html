@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="vitalii zhdanskyi - desarrollador backend y especialista en ciberseguridad. portfolio tecnico, proyectos java (spring boot), c++ y terminal algoritmica.">
-
-    <!-- etiqueta de validacion de bing -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="vitalii zhdanskyi - desarrollador backend full-stack. portfolio tecnico, proyectos java (spring boot), c++ y terminal algoritmica." />
+    
+    <!-- etiquetas open graph -->
+    <meta property="og:title" content="Vitalii Zhdanskyi | Portfolio" />
+    <meta property="og:description" content="desarrollador backend full-stack. portfolio tecnico, proyectos java (spring boot), c++ y terminal algoritmica." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/img/favicon1.png" />
+    
+    <link rel="icon" href="/img/favicon1.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <meta name="msvalidate.01" content="2DE2023ADA924B598EEA0C2B8BA4E5C9" />
-
-    <meta property="og:title" content="VITALII ZHDANSKYI | PORTFOLIO">
-    <meta property="og:description"
-        content="desarrollo backend profesional, ciberseguridad y programacion de sistemas a medida.">
-    <meta property="og:image" content="https://zhdanskyi.com/img/profile_pixel.jpg">
-    <meta property="og:url" content="https://zhdanskyi.com/">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>vitalii zhdanskyi | desarrollador backend y ciberseguridad</title>
-
-    <!-- google analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RFRRDCC6P"></script>
-    <script>
+    
+    <!-- google analytics con defer para metricas lcp -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-2RFRRDCC6P"></script>
+    <script defer>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-2RFRRDCC6P');
     </script>
     <!-- google tag manager -->
-    <script>(function (w, d, s, l, i) {
+    <script defer>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
                     new Date().getTime(), event: 'gtm.js'
@@ -35,104 +35,10 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-TLDHRBM5');</script>
-
-    <!-- favicon publico -->
-    <link rel="icon" href="img/favicon1.png" type="image/png">
-    <link rel="canonical" href="https://zhdanskyi.com/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/matrix.css">
+    <title>Vitalii Zhdanskyi | Portfolio</title>
 </head>
-
-<body class="matrix-body">
-    <!-- marco tipo cyberpunk -->
-    <div class="double-frame"></div>
-
-    <!-- botones de idiomas -->
-    <div class="lang-fixed">
-        <button class="lang-btn" onclick="changeLanguage('es')">ES</button>
-        <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
-        <button class="lang-btn" onclick="changeLanguage('ua')">UA</button>
-    </div>
-
-    <div class="cyber-wrapper">
-
-        <!-- cabecera: un unico h1 con palabras clave inyectadas -->
-        <header class="cyber-header">
-            <div class="cyber-avatar-box">
-                <img src="img/profile_pixel.jpg" alt="retrato pixel vitalii zhdanskyi" class="cyber-avatar">
-            </div>
-
-            <h1 class="cyber-title">
-                <span data-i18n="header.main">VITALII</span> <span style="color: var(--neon-purple);"
-                    data-i18n="header.sub">ZHDANSKYI</span>
-                <span class="seo-h1-sub">> desarrollador backend y especialista en ciberseguridad</span>
-            </h1>
-        </header>
-
-        <!-- navegacion semantica con enlaces a reales -->
-        <div class="cyber-nav-container">
-            <nav class="cyber-nav">
-                <a href="index.html" class="cyber-link">[ INICIO ]</a>
-                <a href="projects.html" class="cyber-link" data-i18n="nav.03">[ PROYECTOS ]</a>
-                <a href="experience.html" class="cyber-link" data-i18n="nav.02">[ EXPERIENCIA ]</a>
-                <a href="colaboradores.html" class="cyber-link">[ COLABORADORES ]</a>
-                <a href="contact.html" class="cyber-link" data-i18n="nav.04">[ CONTACTO ]</a>
-                <a href="cv.html" class="cyber-link glow-purple" data-i18n="cv.nav">[ DIGITAL_CV ]</a>
-            </nav>
-        </div>
-
-        <main class="cyber-main">
-            <!-- consola original sin seo intrusivo -->
-            <div class="terminal-window" style="margin-top: 50px;">
-                <div class="terminal-header-bar">
-                    <div class="terminal-buttons">
-                        <span class="btn-close"></span>
-                        <span class="btn-min"></span>
-                        <span class="btn-max"></span>
-                    </div>
-                    <div class="terminal-path">root@zhdanskyi:/sys/chatbot_v2# _</div>
-                </div>
-
-                <div class="terminal-body-area" id="chat-output">
-                    <div class="boot-sequence">
-                        <p class="sys-msg">> iniciando hub interactivo...</p>
-                        <p class="sys-msg">> enlazando componentes modulares...</p>
-                        <p class="bot-msg">> terminal online. escribe <span style="color:#fff">'ayuda'</span> para
-                            empezar a navegar o usa el menu superior.</p>
-                    </div>
-                </div>
-
-                <div class="terminal-input-bar">
-                    <span class="prompt-arrow">></span>
-                    <input type="text" id="chat-input" class="cmd-input" autocomplete="off" autofocus spellcheck="false"
-                        placeholder="ingresa comando...">
-                    <span class="blinking-cursor">_</span>
-                </div>
-            </div>
-        </main>
-
-        <!-- pie de pagina minimalista -->
-        <footer class="cyber-footer">
-            <div class="matrix-socials">
-                <a href="https://github.com/zhdanskyi" target="_blank"><img src="img/github-pixel.png" alt="github"
-                        class="social-icon"></a>
-                <a href="https://linkedin.com/in/zhdanskyi" target="_blank"><img src="img/linkedin-pixel.png"
-                        alt="linkedin" class="social-icon"></a>
-                <a href="mailto:zhdanskyibusiness@gmail.com"><img src="img/email-pixel.png" alt="email"
-                        class="social-icon"></a>
-            </div>
-            <p class="footer-text">© 2026 VITALII ZHDANSKYI | <span data-i18n="footer.made">PROYECTO PARA LM</span></p>
-        </footer>
-
-    </div>
-
-    <!-- scripts carga diferida o asincrona -->
-    <script src="js/background.js" defer></script>
-    <script src="js/logic.js" defer></script>
+<body class="bg-dark-bg text-white font-body overflow-x-hidden min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
-
 </html>
