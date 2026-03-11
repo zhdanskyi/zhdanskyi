@@ -64,7 +64,7 @@ const TerminalBot = () => {
   };
 
   return (
-    <div id="chatbot" role="log" aria-live="polite" aria-label="Asistente virtual y consola interactiva" className="w-full h-[350px] bg-terminal-bg border border-neon-green rounded shadow-terminal flex flex-col relative bg-scanlines overflow-hidden mt-12 mx-auto">
+    <div id="chatbot" data-chatbot="true" role="log" aria-live="polite" aria-label="Asistente de comandos interactivo" className="w-full h-[350px] bg-terminal-bg border border-neon-green rounded shadow-terminal flex flex-col relative bg-scanlines overflow-hidden mt-12 mx-auto">
       {/* barra de control estilo terminal linux */}
       <div className="bg-[#111] py-3 px-4 flex items-center justify-center border-b border-neon-green relative z-10">
         <div className="flex gap-2 absolute left-4">

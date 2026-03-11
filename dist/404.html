@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- detener penalizacion por soft 404 seo a11y bypass -->
+    <meta name="robots" content="noindex">
+    <title>404 Not Found - Error</title>
+    <style>
+        body { 
+            background-color: #050505; 
+            color: #00ff00; 
+            font-family: monospace; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            margin: 0; 
+            text-align: center;
+        }
+        h1 { 
+            font-size: 2rem; 
+            margin-bottom: 2rem; 
+            text-shadow: 0 0 10px #00ff00; 
+            text-transform: uppercase;
+        }
+        a { 
+            color: #00ff00; 
+            text-decoration: none; 
+            border: 1px solid #00ff00; 
+            padding: 10px 20px; 
+            transition: all 0.3s; 
+            text-transform: uppercase;
+        }
+        a:hover { 
+            background-color: rgba(0,255,0,0.1); 
+            box-shadow: 0 0 15px #00ff00; 
+        }
+    </style>
+</head>
+<body>
+    <!-- titulo visible para usuario real y crawlers -->
+    <h1>404 - Sistema No Encontrado</h1>
+    <!-- enlace manual para navegacion semantica real -->
+    <a href="/">[ VOLVER AL INICIO ]</a>
+</body>
+</html>

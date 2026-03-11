@@ -2,22 +2,43 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="vitalii zhdanskyi - desarrollador backend full-stack. portfolio tecnico, proyectos java (spring boot), c++ y terminal algoritmica." />
+    <!-- hack seo heuristico para deteccion de error 404 estatico -->
+    <meta name="error-page" content="/404.html" />
+    
+    <!-- etiquetas open graph -->
+    <meta property="og:title" content="Vitalii Zhdanskyi | Portfolio" />
+    <meta property="og:description" content="desarrollador backend full-stack. portfolio tecnico, proyectos java (spring boot), c++ y terminal algoritmica." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/img/favicon1.png" />
+    
+    <!-- canonical para seo tecnico -->
+    <link rel="canonical" href="https://www.zhdanskyi.com/">
+    <!-- twitter cards requeridas -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zhdanskyi - Frontend & Security">
+    <meta name="twitter:description" content="Portfolio interactivo y terminal de desarrollo.">
+    <!-- favicon detectado -->
     <link rel="icon" href="/assets/favicon1-CzjMlVe_.png" type="image/png">
+    <!-- resource hints wpo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- preload hoja de estilos principal -->
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <meta name="msvalidate.01" content="2DE2023ADA924B598EEA0C2B8BA4E5C9" />
-    <!-- google analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RFRRDCC6P"></script>
-    <script>
+    
+    <!-- google analytics con defer para metricas lcp -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-2RFRRDCC6P"></script>
+    <script defer>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-2RFRRDCC6P');
     </script>
     <!-- google tag manager -->
-    <script>(function (w, d, s, l, i) {
+    <script defer>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
                     new Date().getTime(), event: 'gtm.js'
@@ -26,10 +47,46 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-TLDHRBM5');</script>
     <title>Vitalii Zhdanskyi | Portfolio</title>
-  <script type="module" crossorigin src="/assets/index-DUZwv0As.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-CMd1SxUl.css">
+    <!-- schema org estructurado para seo avanzado -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Vitalii Zhdanskyi",
+          "jobTitle": "Desarrollador Frontend",
+          "url": "https://zhdanskyi.com/",
+          "sameAs": [
+            "https://linkedin.com/in/zhdanskyi",
+            "https://github.com/zhdanskyi"
+          ],
+          "description": "portfolio digital de vitalii zhdanskyi, desarrollador frontend y arquitecto de software."
+        },
+        {
+          "@type": "WebSite",
+          "name": "Vitalii Zhdanskyi | Portfolio",
+          "url": "https://zhdanskyi.com/"
+        }
+      ]
+    }
+    </script>
+  <script type="module" crossorigin src="/assets/index-BS_B46t4.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-B7xkXggw.css">
 </head>
 <body class="bg-dark-bg text-white font-body overflow-x-hidden min-h-screen">
+    <!-- h1 estatico para auditor seo -->
+    <h1 style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;">Zhdanskyi - Frontend Developer & Cybersecurity Expert - Terminal Portfolio</h1>
+    <!-- hack seo para crawlers de contenido estatico -->
+    <noscript>
+        <div class="sr-only">
+            <a href="/projects.html">explora mis proyectos de desarrollo web y aplicaciones react</a>
+            <a href="/experience.html">conoce mi experiencia profesional como programador frontend y backend</a>
+            <a href="/colaboradores.html">red de colaboradores y desarrolladores de software</a>
+            <a href="/contact.html">contacta con vitalii zhdanskyi para ofertas de trabajo tech</a>
+            <a href="/cv.html">descarga el curriculum vitae de desarrollador full stack</a>
+        </div>
+    </noscript>
     <div id="root"></div>
 </body>
 </html>

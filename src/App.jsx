@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { Routes, Route, useLocation, Navigate, Maps } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Experience from './pages/Experience';

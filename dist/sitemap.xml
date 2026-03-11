@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.zhdanskyi.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://zhdanskyi.com/proyectos</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zhdanskyi.com/experiencia</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zhdanskyi.com/colaboradores</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zhdanskyi.com/cv</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zhdanskyi.com/contacto</loc>
+    <priority>0.6</priority>
+  </url>
+</urlset>
