@@ -13,8 +13,11 @@
     <meta property="og:image" content="/img/favicon1.png" />
     
     <link rel="icon" href="/img/favicon1.png" type="image/png">
+    <!-- resource hints wpo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- preload hoja de estilos principal -->
+    <link rel="preload" as="style" href="/src/index.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <meta name="msvalidate.01" content="2DE2023ADA924B598EEA0C2B8BA4E5C9" />
     
@@ -36,8 +39,42 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-TLDHRBM5');</script>
     <title>Vitalii Zhdanskyi | Portfolio</title>
+    <!-- schema org estructurado para seo avanzado -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Vitalii Zhdanskyi",
+          "jobTitle": "Desarrollador Frontend",
+          "url": "https://zhdanskyi.com/",
+          "sameAs": [
+            "https://linkedin.com/in/zhdanskyi",
+            "https://github.com/zhdanskyi"
+          ],
+          "description": "portfolio digital de vitalii zhdanskyi, desarrollador frontend y arquitecto de software."
+        },
+        {
+          "@type": "WebSite",
+          "name": "Vitalii Zhdanskyi | Portfolio",
+          "url": "https://zhdanskyi.com/"
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="bg-dark-bg text-white font-body overflow-x-hidden min-h-screen">
+    <!-- hack seo para crawlers de contenido estatico -->
+    <noscript>
+        <div class="sr-only">
+            <a href="/projects.html">explora mis proyectos de desarrollo web y aplicaciones react</a>
+            <a href="/experience.html">conoce mi experiencia profesional como programador frontend y backend</a>
+            <a href="/colaboradores.html">red de colaboradores y desarrolladores de software</a>
+            <a href="/contact.html">contacta con vitalii zhdanskyi para ofertas de trabajo tech</a>
+            <a href="/cv.html">descarga el curriculum vitae de desarrollador full stack</a>
+        </div>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
 </body>

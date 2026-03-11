@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate, Maps } from 'react-router-dom';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Experience from './pages/Experience';
@@ -37,7 +37,7 @@ function App() {
         <Route path="/colaboradores" element={<Collaborators />} />
         <Route path="/cv.html" element={<DigitalCV />} />
         <Route path="/cv" element={<DigitalCV />} />
-        {/* redireccion automatica al inicio para rutas inexistentes */}
+        {/* redireccion forzada al inicio para rutas 404 */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
