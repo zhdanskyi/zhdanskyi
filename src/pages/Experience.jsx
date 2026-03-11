@@ -13,7 +13,7 @@ const Experience = () => {
                 <meta name="description" content="experiencia laboral de vitalii zhdanskyi - fullstack developer" />
             </Helmet>
 
-            <main className="max-w-[1200px] mx-auto px-8 pb-16 pt-8 fade-in flex flex-col items-center">
+            <main id="main-content" className="max-w-[1200px] mx-auto px-8 pb-16 pt-8 fade-in flex flex-col items-center">
                 <div className="flex justify-center items-center pb-4 mb-8 w-full">
                     <h1 className="font-head text-[2rem] text-neon-green text-center border-b-2 border-neon-green pb-2 uppercase">{t('nav.02')}</h1>
                 </div>

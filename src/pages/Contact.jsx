@@ -13,7 +13,7 @@ const Contact = () => {
                 <meta name="description" content="formulario de contacto de vitalii zhdanskyi" />
             </Helmet>
 
-            <main className="max-w-[1200px] mx-auto px-8 pb-16 pt-8 fade-in flex flex-col justify-center items-center min-h-[50vh]">
+            <main id="main-content" className="max-w-[1200px] mx-auto px-8 pb-16 pt-8 fade-in flex flex-col justify-center items-center min-h-[50vh]">
                 <div className="flex justify-center items-center pb-4 mb-8 w-full">
                     <h1 className="font-head text-[2rem] text-neon-green text-center border-b-2 border-neon-green pb-2 uppercase">{t('nav.04')}</h1>
                 </div>
@@ -21,8 +21,9 @@ const Contact = () => {
                 <div className="max-w-[600px] w-full mx-auto border border-neon-green p-8 bg-[#000]">
                     <form action="https://formsubmit.co/zhdanskyibusiness@gmail.com" method="POST">
                         <div className="mb-6">
-                            <label className="block mb-2 font-head text-[0.8rem] text-neon-green fade-in">{t('cont.name')}</label>
+                            <label htmlFor="contact-name" className="block mb-2 font-head text-[0.8rem] text-neon-green fade-in">{t('cont.name')}</label>
                             <input 
+                                id="contact-name"
                                 type="text" 
                                 name="name" 
                                 className="w-full bg-[#000] border border-[#333] p-4 text-white font-body focus:outline-none focus:border-neon-purple fade-in" 
@@ -32,8 +33,9 @@ const Contact = () => {
                         </div>
 
                         <div className="mb-6">
-                            <label className="block mb-2 font-head text-[0.8rem] text-neon-green fade-in">{t('cont.email')}</label>
+                            <label htmlFor="contact-email" className="block mb-2 font-head text-[0.8rem] text-neon-green fade-in">{t('cont.email')}</label>
                             <input 
+                                id="contact-email"
                                 type="email" 
                                 name="email" 
                                 className="w-full bg-[#000] border border-[#333] p-4 text-white font-body focus:outline-none focus:border-neon-purple fade-in" 
@@ -43,8 +45,9 @@ const Contact = () => {
                         </div>
 
                         <div className="mb-6">
-                            <label className="block mb-2 font-head text-[0.8rem] text-neon-green fade-in">{t('cont.msg')}</label>
+                            <label htmlFor="contact-message" className="block mb-2 font-head text-[0.8rem] text-neon-green fade-in">{t('cont.msg')}</label>
                             <textarea 
+                                id="contact-message"
                                 name="message" 
                                 rows="5" 
                                 className="w-full bg-[#000] border border-[#333] p-4 text-white font-body focus:outline-none focus:border-neon-purple fade-in resize-y" 

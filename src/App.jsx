@@ -17,6 +17,8 @@ function App() {
 
   return (
     <div className={`w-full min-h-screen ${isHome ? 'flex items-center justify-center bg-dark-bg bg-matrix' : 'h-auto overflow-y-auto bg-[#050505]'}`}>
+      {/* accesibilidad a11y skip link */}
+      <a href="#main-content" className="sr-only focus:not-sr-only">Saltar al contenido principal</a>
       <AnimatedBackground />
       {/* doble marco global cyber */}
       <div className="double-frame"></div>
