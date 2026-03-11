@@ -78,7 +78,8 @@ const ChatbotUI = () => {
 
       {isOpen && (
         <div className="fixed bottom-24 right-6 z-[99] animate-fade-in w-[90vw] max-w-[400px]">
-          <div id="chatbot-interface" data-chatbot="true" role="log" aria-live="polite" aria-label="Asistente de comandos interactivo" className="w-full h-[350px] bg-terminal-bg border border-neon-green rounded shadow-terminal flex flex-col relative bg-scanlines overflow-hidden">
+          <div id="chatbot" role="complementary" aria-label="Asistente virtual Zhdanskyi" data-testid="chatbot-component" className="w-full h-[350px] bg-terminal-bg border border-neon-green rounded shadow-terminal flex flex-col relative bg-scanlines overflow-hidden">
+            <span className="sr-only">Chatbot interactivo activo para asistencia al usuario</span>
             {/* barra de control estilo terminal linux */}
             <div className="bg-[#111] py-3 px-4 flex items-center justify-center border-b border-neon-green relative z-10">
               <div className="flex gap-2 absolute left-4">

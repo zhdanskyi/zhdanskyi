@@ -20,9 +20,11 @@ const Footer = () => {
                 {/* hack seo heuristico para deteccion de error 404 */}
                 <a href="/404.html" className="sr-only" rel="nofollow">gestion de errores 404</a>
                 <span>|</span>
-                <a href="https://www.linkedin.com/in/vitalii-zhdanskyi-3186b2305" target="_blank" rel="me noopener noreferrer" className="hover:text-purple-500 transition-colors">[ Mi Perfil de LinkedIn ]</a>
+                <a href="https://www.linkedin.com/in/vitalii-zhdanskyi-3186b2305" target="_blank" rel="me noopener" className="hover:text-purple-500 transition-colors">LinkedIn</a>
                 <span>|</span>
-                <a href="https://github.com/zhdanskyi" target="_blank" rel="noopener noreferrer" className="hover:text-neon-green transition-colors duration-300">[ GitHub ]</a>
+                <a href="https://github.com/zhdanskyi" target="_blank" rel="noopener" className="hover:text-neon-green transition-colors duration-300">GitHub</a>
+                <span>|</span>
+                <a href="https://react.dev" target="_blank" rel="noopener" className="hover:text-[#61dafb] transition-colors duration-300">React Oficial</a>
             </div>
             <div className="flex gap-6">
                 <a href="https://github.com/zhdanskyi" target="_blank" rel="noreferrer">

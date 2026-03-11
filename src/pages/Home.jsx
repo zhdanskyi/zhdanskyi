@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '../context/LanguageContext';
 import Navigation from '../components/Navigation';
 import ChatbotUI from '../components/ChatbotUI';
+import SystemStatus from '../components/SystemStatus';
 import Footer from '../components/Footer';
 
 const Home = () => {
@@ -72,6 +73,8 @@ const Home = () => {
         <main id="main-content" className="w-full max-w-[650px] flex-none flex flex-col scale-[0.95] origin-top">
           <ChatbotUI />
         </main>
+        
+        <SystemStatus />
 
         <Footer />
       </div>
