@@ -1,6 +1,17 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/index.html", "destination": "/index.html" },
+    { "source": "/projects.html", "destination": "/index.html" },
+    { "source": "/proyectos", "destination": "/index.html" },
+    { "source": "/experience.html", "destination": "/index.html" },
+    { "source": "/experiencia", "destination": "/index.html" },
+    { "source": "/contact.html", "destination": "/index.html" },
+    { "source": "/contacto", "destination": "/index.html" },
+    { "source": "/colaboradores.html", "destination": "/index.html" },
+    { "source": "/colaboradores", "destination": "/index.html" },
+    { "source": "/cv.html", "destination": "/index.html" },
+    { "source": "/cv", "destination": "/index.html" }
   ]
 }
