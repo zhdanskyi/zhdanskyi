@@ -1,13 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Experience from './pages/Experience';
 import Contact from './pages/Contact';
 import Collaborators from './pages/Collaborators';
 import DigitalCV from './pages/DigitalCV';
-import NotFound from './pages/NotFound';
 import AnimatedBackground from './components/AnimatedBackground';
 import Navigation from './components/Navigation';
 import ReturnButton from './components/ReturnButton';
@@ -38,7 +37,8 @@ function App() {
         <Route path="/colaboradores" element={<Collaborators />} />
         <Route path="/cv.html" element={<DigitalCV />} />
         <Route path="/cv" element={<DigitalCV />} />
-        <Route path="*" element={<NotFound />} />
+        {/* redireccion automatica al inicio para rutas inexistentes */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
   );
