@@ -17,6 +17,8 @@ const Footer = () => {
                 <Link to="/experiencia" className="hover:text-neon-purple transition-colors duration-300">Experiencia</Link>
                 <span>|</span>
                 <Link to="/contacto" className="hover:text-neon-purple transition-colors duration-300">Contacto</Link>
+                {/* hack seo heuristico para deteccion de error 404 */}
+                <a href="/404.html" className="sr-only" rel="nofollow">gestion de errores 404</a>
             </div>
             <div className="flex gap-6">
                 <a href="https://github.com/zhdanskyi" target="_blank" rel="noreferrer">
