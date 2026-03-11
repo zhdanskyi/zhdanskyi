@@ -3,7 +3,7 @@ import React from 'react';
 
 const SystemStatus = () => {
   return (
-    <div className="w-full max-w-[850px] mb-8 text-[0.6rem] text-[#333] font-mono leading-tight text-justify break-words mt-4 px-4 opacity-60">
+    <div className="w-full max-w-[850px] text-[9px] text-[#333] font-mono leading-tight text-justify break-words mt-4 px-4 opacity-60">
       <p>
         [system.status] inicializacion de arquitectura de software y optimizacion web completa. 
         este portfolio se ha diseñado aplicando rigor arquitectonico en la separacion de responsabilidades (soc) y 

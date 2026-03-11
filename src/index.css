@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-dark-bg text-white font-body;
+    @apply bg-light-bg text-light-text dark:bg-dark-bg dark:text-white font-body transition-colors duration-500;
   }
 }
 
@@ -63,6 +63,14 @@
     100% { transform: rotate(360deg); }
   }
 
+  /* glitch effect */
+  .glitch-text {
+    position: relative;
+    display: inline-block;
+  }
+  .glitch-text:hover {
+    animation: glitch-anim 0.3s linear infinite;
+  }
   .glitch-anim {
     animation: glitch-select 0.3s linear;
   }
@@ -85,23 +93,14 @@
     100% { opacity: 1; }
   }
 
-  .double-frame {
-    position: fixed;
-    inset: 0;
-    z-index: 999;
-    pointer-events: none;
+  /* staggered menu anim */
+  .stagger-item {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: cascadeUp 0.4s forwards;
   }
-  .double-frame::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border: 2px solid theme('colors.neon-green');
-  }
-  .double-frame::after {
-    content: "";
-    position: absolute;
-    inset: 12px;
-    border: 1px solid theme('colors.neon-green');
+  @keyframes cascadeUp {
+    to { opacity: 1; transform: translateY(0); }
   }
   
   /* terminal buttons */

@@ -2,9 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '../context/LanguageContext';
 import Navigation from '../components/Navigation';
-import ChatbotUI from '../components/ChatbotUI';
-import SystemStatus from '../components/SystemStatus';
-import Footer from '../components/Footer';
 
 const Home = () => {
   const { t } = useLanguage();
@@ -69,14 +66,6 @@ const Home = () => {
                 [system.manifest] desarrollo de single page applications con react y vite, implementacion de tailwind css para diseño atomico, auditoria de seguridad en entornos frontend, optimizacion de core web vitals (lcp, fid, cls), gestion de despliegues continuos en vercel, arquitectura de componentes modulares, seo tecnico avanzado y desarrollo de interfaces de usuario interactivas basadas en terminales unix. la creacion de este portfolio cibernetico responde a la necesidad de fusionar un diseño visual impactante con un rendimiento algoritmico perfecto. el uso de react permite la construccion de ecosistemas reactivos donde el estado de la aplicacion se gestiona eficientemente sin recargar el dom de forma innecesaria. vite.js actua como un empaquetador de modulos ultrarrapido, facilitando la integracion de assets estaticos, modulos ecmascript y procesos de construccion eficientes para produccion. por su parte, tailwind css aporta un motor de utilidades que elimina el css no utilizado gracias a su proceso de purga y compilacion jit, garantizando que unicamente se sirvan los bytes estrictamente necesarios al cliente. en cuanto a despliegue, la infraestructura serverless de vercel proporciona un alojamiento proxy en el borde (edge network) que asegura tiempos de respuesta de milisegundos en cualquier parte del mundo. la accesibilidad y el posicionamiento en buscadores (seo) son pilares fundamentales, razon por la que se han implementado directivas avanzadas meta robots, canonicals, marcado estructurado de schema org json-ld interactivo y tecnicas de hidratacion de elementos pre-renderizados. la auditoria de lighthouse arroja metricas impecables gracias a la carga diferida de componentes (lazy loading), el pre-calculo recursivo del hilo secundario, la eliminacion de recursos bloqueantes de renderizado critico y las configuraciones hibridas de render start time y speed index heuristico. el codigo limpio, los patrones de diseño funcionales y las convenciones de nomenclatura estrictas contribuyen a una matriz de mantenimiento continuo altamente escalable para equipos distribuidos. toda inyeccion de dependencias ha sido orquestada meticulosamente para minimizar el tamaño final del bundle de javascript. las interacciones empiricas en el chatbot emulador simulan un procesamiento asincrono basado en arquitecturas de red resilientes y validaciones de datos del cliente antes de los envios de payload. un frontend inmaculado y optimizado es vital no solo para el usuario final garantizando retencion, sino para asegurar un consumo energetico responsivo a nivel servidor edge y un aprovechamiento del ancho de banda asimetrico en redes de espectro variable u offline.
             </p>
         </div>
-
-        <main id="main-content" className="w-full max-w-[650px] flex-none flex flex-col scale-[0.95] origin-top">
-          <ChatbotUI />
-        </main>
-        
-        <SystemStatus />
-
-        <Footer />
       </div>
     </>
   );

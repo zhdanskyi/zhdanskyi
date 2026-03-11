@@ -71,10 +71,11 @@ const ChatbotUI = () => {
       <button 
         onClick={() => setIsOpen(!isOpen)} 
         className="fixed bottom-6 right-6 w-14 h-14 bg-[#0a0a0a] border border-neon-green rounded-full shadow-[0_0_15px_#00ff00] flex items-center justify-center z-[100] hover:bg-neon-green hover:bg-opacity-20 transition-all duration-300 group"
-        aria-label="abrir asistente virtual"
+        aria-label="Abrir asistente inteligente"
       >
         <span className="text-neon-green text-xl font-mono group-hover:scale-110 transition-transform select-none">&gt;_</span>
       </button>
+      <span className="fixed bottom-2 right-6 text-[0.5rem] text-neon-green opacity-50 font-mono select-none">Asistente Virtual Activo</span>
 
       {isOpen && (
         <div className="fixed bottom-24 right-6 z-[99] animate-fade-in w-[90vw] max-w-[400px]">

@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -11,11 +12,16 @@ export default {
         'neon-purple': '#6D28D9',
         'dark-bg': '#030303',
         'dark-box': '#050505',
+        'light-bg': '#f8f9fa',
+        'light-box': '#ffffff',
+        'light-text': '#2b2b2b',
         'terminal-header': '#111111',
         'terminal-bg': 'rgba(3,3,3,0.95)',
+        'light-terminal': 'rgba(255,255,255,0.95)',
         'error-red': '#ff5f56',
         'warn-yellow': '#ffbd2e',
-        'success-green': '#27c93f'
+        'success-green': '#27c93f',
+        'electric-blue': '#007bff'
       },
       fontFamily: {
         'head': ['"Press Start 2P"', 'cursive'],
