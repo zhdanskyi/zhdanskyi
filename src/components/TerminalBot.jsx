@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const TerminalBot = () => {
   const [inputVal, setInputVal] = useState('');
   const [messages, setMessages] = useState([
-    { type: 'sys', text: '> iniciando hub interactivo...' },
+    { type: 'sys', text: '> iniciando el asistente IA...' },
     { type: 'sys', text: '> enlazando componentes modulares...' },
     { type: 'bot', text: '> terminal online. escribe \'ayuda\' para empezar a navegar o usa el menu superior.', isHtml: true }
   ]);
@@ -52,12 +52,12 @@ const TerminalBot = () => {
       const currentCmd = inputVal;
       setMessages(prev => [...prev, { type: 'user', text: `root@zhdanskyi:~# ${currentCmd}` }]);
       setInputVal('');
-      
+
       setTimeout(() => {
         const response = handleCommand(currentCmd);
         if (response) {
-            if (response === '> terminal reiniciada.') return; 
-            setMessages(prev => [...prev, { type: 'bot', text: response }]);
+          if (response === '> terminal reiniciada.') return;
+          setMessages(prev => [...prev, { type: 'bot', text: response }]);
         }
       }, 300);
     }
@@ -65,37 +65,32 @@ const TerminalBot = () => {
 
   return (
     <div id="chatbot" data-chatbot="true" role="log" aria-live="polite" aria-label="Asistente de comandos interactivo" className="w-full h-[350px] bg-terminal-bg border border-neon-green rounded shadow-terminal flex flex-col relative bg-scanlines overflow-hidden mt-12 mx-auto">
-      {/* barra de control estilo terminal linux */}
-      <div className="bg-[#111] py-3 px-4 flex items-center justify-center border-b border-neon-green relative z-10">
-        <div className="flex gap-2 absolute left-4">
-          <span className="btn-close"></span>
-          <span className="btn-min"></span>
-          <span className="btn-max"></span>
-        </div>
-        <div className="font-body text-[#666] text-[0.85rem]">root@zhdanskyi:/sys/chatbot_v2# _</div>
+      {/* barra de control estilo terminal linux nativa */}
+      <div className="bg-[#111] py-2 px-4 flex items-center justify-between border-b border-neon-green relative z-10">
+        <div className="font-body text-[#666] text-[0.75rem]">root@zhdanskyi:/sys/chatbot_v2# _</div>
       </div>
 
       {/* log de mensajes del historial interactivo */}
       <div className="flex-grow p-6 overflow-y-auto font-body text-[1rem] leading-relaxed z-10 flex flex-col items-center text-center">
         {messages.map((m, i) => (
-          <p key={i} className={`mb-1 w-full break-words ${m.type === 'sys' ? 'text-[#888]' : m.type === 'bot' ? 'text-neon-green' : 'text-white'}`} style={m.color ? {color: m.color} : {}}>
+          <p key={i} className={`mb-1 w-full break-words ${m.type === 'sys' ? 'text-[#888]' : m.type === 'bot' ? 'text-neon-green' : 'text-white'}`} style={m.color ? { color: m.color } : {}}>
             {m.isHtml ? <span dangerouslySetInnerHTML={{ __html: m.text.replace("'ayuda'", "<span style='color:#fff'>'ayuda'</span>") }} /> : m.text}
           </p>
         ))}
         <div ref={endRef} />
       </div>
 
-      {/* imput para comandos directos */}
+      {/* input para comandos directos */}
       <div className="flex items-center justify-center py-4 px-6 bg-[#0a0a0a] border-t border-dashed border-[#333] z-10">
         <span className="text-neon-purple mr-4 font-bold">&gt;</span>
-        <input 
-          type="text" 
+        <input
+          type="text"
           value={inputVal}
           onChange={e => setInputVal(e.target.value)}
           onKeyDown={onKeyDown}
           className="bg-transparent border-none text-white font-body text-[1rem] flex-grow outline-none text-center"
-          autoComplete="off" 
-          autoFocus 
+          autoComplete="off"
+          autoFocus
           spellCheck="false"
           placeholder="ingresa comando..."
         />

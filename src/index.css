@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-light-bg text-light-text dark:bg-dark-bg dark:text-white font-body transition-colors duration-500;
+    @apply bg-power-bg text-power-text dark:bg-dark-bg dark:text-white font-body transition-colors duration-500;
   }
 }
 

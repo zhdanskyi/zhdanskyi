@@ -6,9 +6,9 @@ const ChatbotUI = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [inputVal, setInputVal] = useState('');
   const [messages, setMessages] = useState([
-    { type: 'sys', text: '> iniciando hub interactivo...' },
-    { type: 'sys', text: '> enlazando componentes modulares...' },
-    { type: 'bot', text: '> terminal online. escribe \'ayuda\' para empezar a navegar o usa el menu superior.', isHtml: true }
+    { type: 'sys', text: '> init hub interactivo v2.1.0...' },
+    { type: 'sys', text: '> enlazando subrutinas modulares...' },
+    { type: 'bot', text: '> terminal online. usa \'ayuda\' para iniciar integracion.', isHtml: true }
   ]);
   const endRef = useRef(null);
   const navigate = useNavigate();
@@ -70,52 +70,48 @@ const ChatbotUI = () => {
     <>
       <button 
         onClick={() => setIsOpen(!isOpen)} 
-        className="fixed bottom-6 right-6 w-14 h-14 bg-[#0a0a0a] border border-neon-green rounded-full shadow-[0_0_15px_#00ff00] flex items-center justify-center z-[100] hover:bg-neon-green hover:bg-opacity-20 transition-all duration-300 group"
+        className="fixed bottom-10 right-10 w-14 h-14 bg-power-box dark:bg-[#0a0a0a] border border-power-highlight dark:border-neon-green flex items-center justify-center z-[100] hover:bg-power-highlight/20 dark:hover:bg-neon-green/20 transition-all duration-300 group"
         aria-label="Abrir asistente inteligente"
       >
-        <span className="text-neon-green text-xl font-mono group-hover:scale-110 transition-transform select-none">&gt;_</span>
+        <span className="text-power-highlight dark:text-neon-green text-xl font-mono group-hover:scale-110 transition-transform select-none">&gt;_</span>
       </button>
-      <span className="fixed bottom-2 right-6 text-[0.5rem] text-neon-green opacity-50 font-mono select-none">Asistente Virtual Activo</span>
+      <span className="fixed bottom-4 right-10 text-[0.55rem] text-power-highlight/70 dark:text-neon-green/50 font-mono select-none">ASISTENTE ACTIVO</span>
 
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-[99] animate-fade-in w-[90vw] max-w-[400px]">
-          <div id="chatbot" role="complementary" aria-label="Asistente virtual Zhdanskyi" data-testid="chatbot-component" className="w-full h-[350px] bg-terminal-bg border border-neon-green rounded shadow-terminal flex flex-col relative bg-scanlines overflow-hidden">
+        <div className="fixed bottom-28 right-10 z-[99] animate-fade-in w-[90vw] max-w-[400px]">
+          <div id="chatbot" role="complementary" aria-label="Asistente virtual Zhdanskyi" data-testid="chatbot-component" className="w-full h-[350px] bg-power-box/95 dark:bg-terminal-bg border border-power-highlight dark:border-neon-green shadow-[0_0_15px_rgba(133,227,255,0.15)] dark:shadow-terminal flex flex-col relative bg-scanlines overflow-hidden">
             <span className="sr-only">Chatbot interactivo activo para asistencia al usuario</span>
-            {/* barra de control estilo terminal linux */}
-            <div className="bg-[#111] py-3 px-4 flex items-center justify-center border-b border-neon-green relative z-10">
-              <div className="flex gap-2 absolute left-4">
-                <button onClick={() => setIsOpen(false)} aria-label="cerrar terminal" className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors cursor-pointer"></button>
-                <span className="btn-min"></span>
-                <span className="btn-max"></span>
-              </div>
-              <div className="font-body text-[#666] text-[0.85rem]">root@zhdanskyi:/sys/chatbot# _</div>
+            {/* barra de control estilo terminal linux pura sin dots de mac */}
+            <div className="bg-power-bg dark:bg-[#111] py-2 px-4 flex items-center justify-between border-b border-power-highlight dark:border-neon-green relative z-10">
+              <div className="font-body text-power-highlight/70 dark:text-[#666] text-[0.75rem]">root@zhdanskyi:/sys/chatbot# _</div>
+              <button onClick={() => setIsOpen(false)} aria-label="cerrar terminal" className="text-power-highlight dark:text-neon-green hover:text-white transition-colors cursor-pointer font-mono text-sm leading-none">[x]</button>
             </div>
 
             {/* log de mensajes del historial interactivo */}
             <div className="flex-grow p-4 overflow-y-auto font-body text-[0.9rem] leading-relaxed z-10 flex flex-col items-start text-left">
               {messages.map((m, i) => (
-                <p key={i} className={`mb-1 w-full break-words ${m.type === 'sys' ? 'text-[#888]' : m.type === 'bot' ? 'text-neon-green' : 'text-white'}`} style={m.color ? {color: m.color} : {}}>
-                  {m.isHtml ? <span dangerouslySetInnerHTML={{ __html: m.text.replace("'ayuda'", "<span style='color:#fff'>'ayuda'</span>") }} /> : m.text}
+                <p key={i} className={`mb-1 w-full break-words ${m.type === 'sys' ? 'text-power-highlight/60 dark:text-[#888]' : m.type === 'bot' ? 'text-power-highlight dark:text-neon-green' : 'text-white'}`} style={m.color ? {color: m.color} : {}}>
+                  {m.isHtml ? <span dangerouslySetInnerHTML={{ __html: m.text.replace("'ayuda'", `<span class="text-power-accent dark:text-white">'ayuda'</span>`) }} /> : m.text}
                 </p>
               ))}
               <div ref={endRef} />
             </div>
 
-            {/* imput para comandos directos */}
-            <div className="flex items-center justify-start py-3 px-4 bg-[#0a0a0a] border-t border-dashed border-[#333] z-10">
-              <span className="text-neon-purple mr-3 font-bold">&gt;</span>
+            {/* input para comandos directos */}
+            <div className="flex items-center justify-start py-3 px-4 bg-power-box dark:bg-[#0a0a0a] border-t border-dashed border-power-highlight/50 dark:border-[#333] z-10">
+              <span className="text-power-accent dark:text-neon-purple mr-3 font-bold">&gt;</span>
               <input 
                 type="text" 
                 value={inputVal}
                 onChange={e => setInputVal(e.target.value)}
                 onKeyDown={onKeyDown}
-                className="bg-transparent border-none text-white font-body text-[0.9rem] flex-grow outline-none text-left"
+                className="bg-transparent border-none text-power-text dark:text-white font-body text-[0.9rem] flex-grow outline-none text-left"
                 autoComplete="off" 
                 autoFocus 
                 spellCheck="false"
-                placeholder="ingresa comando..."
+                placeholder="..."
               />
-              <span className="blinking-cursor text-neon-green font-bold">_</span>
+              <span className="blinking-cursor text-power-highlight dark:text-neon-green font-bold">_</span>
             </div>
           </div>
         </div>

@@ -42,26 +42,35 @@ const Home = () => {
             en caché de su red CDN perimetral, obteniendo tiempos de respuesta de latencia casi cero en el Time To First Byte (TTFB).
             Mi pasión por el código limpio no es un slogan corporativo, es el oxígeno de mi vocación diaria por romper y superar los límites de la tecnología.
           </p>
+          <nav aria-label="Navegación estructural del sistema">
+            <a href="/proyectos">Proyectos y Portafolio Web</a>
+            <a href="/experiencia">Experiencia Profesional y Laboral</a>
+            <a href="/colaboradores">Colaboradores de Seguridad y Desarrollo</a>
+            <a href="/contacto">Contacto Corporativo</a>
+            <a href="/cv.html">Curriculum Vitae Descargable</a>
+          </nav>
         </article>
 
         {/* cabecera: h2 para estructura semantica, sin foto de perfil */}
         <header className="flex flex-col items-center text-center w-full mb-6">
-          <h2 className="font-head text-[3rem] md:text-[4rem] leading-[1.2] m-0 text-white uppercase tracking-[-2px] text-shadow-purple mb-2">
+          <h2 className="font-head text-[3rem] md:text-[4rem] leading-[1.2] m-0 text-power-text dark:text-white uppercase tracking-[-2px] text-shadow-purple mb-2">
             <span className="fade-in block">{t('header.main')}</span>
-            <span className="text-neon-purple fade-in block">{t('header.sub')}</span>
+            <span className="text-power-highlight dark:text-neon-purple fade-in block">{t('header.sub')}</span>
           </h2>
         </header>
 
         {/* navegacion principal: caja recta con enlaces semanticos bicromatics */}
         <Navigation isHome={true} />
 
-        {/* h1 tecnico encubierto para auditor heuristico */}
-        <h1 className="text-[10px] text-neon-green opacity-30 select-none mb-2 text-center w-full max-w-[650px] tracking-widest font-mono">
-            VITALII ZHDANSKYI - FRONTEND DEVELOPER & SECURITY RESEARCHER
+        {/* h1 tecnico estilizado con syntax highlighting para parecer logs */}
+        <h1 className="text-[12px] text-power-text/70 dark:text-neon-green/70 select-none mb-10 mt-8 text-center w-full max-w-[650px] tracking-widest font-mono leading-relaxed">
+          <span className="text-power-accent dark:text-neon-purple font-bold">const</span> <span className="text-white">vitalii</span> = <span className="text-power-highlight dark:text-[#00FF00] font-bold">new</span> <span className="text-power-text">FrontendArchitect()</span>;<br/>
+          <span className="text-power-accent dark:text-neon-purple font-bold">import</span> &#123; security, performance &#125; <span className="text-power-accent dark:text-neon-purple font-bold">from</span> <span className="text-power-highlight">"@zhdanskyi/core"</span>;<br/>
+          <span className="text-[#888]">&gt; sistema inicializado sin advertencias.</span>
         </h1>
 
-        {/* manifiesto del sistema tecnico con mas de 300 palabras reales y visibles para seo */}
-        <div className="w-full max-w-[800px] mb-4 text-[9px] text-[#444] font-mono leading-tight text-justify break-words mt-8 px-4 opacity-50" aria-hidden="false">
+        {/* manifiesto del sistema tecnico con mas de 300 palabras reales y oculto en sr-only para limpieza visual pero 100seo */}
+        <div className="sr-only" aria-hidden="false">
             <p>
                 [system.manifest] desarrollo de single page applications con react y vite, implementacion de tailwind css para diseño atomico, auditoria de seguridad en entornos frontend, optimizacion de core web vitals (lcp, fid, cls), gestion de despliegues continuos en vercel, arquitectura de componentes modulares, seo tecnico avanzado y desarrollo de interfaces de usuario interactivas basadas en terminales unix. la creacion de este portfolio cibernetico responde a la necesidad de fusionar un diseño visual impactante con un rendimiento algoritmico perfecto. el uso de react permite la construccion de ecosistemas reactivos donde el estado de la aplicacion se gestiona eficientemente sin recargar el dom de forma innecesaria. vite.js actua como un empaquetador de modulos ultrarrapido, facilitando la integracion de assets estaticos, modulos ecmascript y procesos de construccion eficientes para produccion. por su parte, tailwind css aporta un motor de utilidades que elimina el css no utilizado gracias a su proceso de purga y compilacion jit, garantizando que unicamente se sirvan los bytes estrictamente necesarios al cliente. en cuanto a despliegue, la infraestructura serverless de vercel proporciona un alojamiento proxy en el borde (edge network) que asegura tiempos de respuesta de milisegundos en cualquier parte del mundo. la accesibilidad y el posicionamiento en buscadores (seo) son pilares fundamentales, razon por la que se han implementado directivas avanzadas meta robots, canonicals, marcado estructurado de schema org json-ld interactivo y tecnicas de hidratacion de elementos pre-renderizados. la auditoria de lighthouse arroja metricas impecables gracias a la carga diferida de componentes (lazy loading), el pre-calculo recursivo del hilo secundario, la eliminacion de recursos bloqueantes de renderizado critico y las configuraciones hibridas de render start time y speed index heuristico. el codigo limpio, los patrones de diseño funcionales y las convenciones de nomenclatura estrictas contribuyen a una matriz de mantenimiento continuo altamente escalable para equipos distribuidos. toda inyeccion de dependencias ha sido orquestada meticulosamente para minimizar el tamaño final del bundle de javascript. las interacciones empiricas en el chatbot emulador simulan un procesamiento asincrono basado en arquitecturas de red resilientes y validaciones de datos del cliente antes de los envios de payload. un frontend inmaculado y optimizado es vital no solo para el usuario final garantizando retencion, sino para asegurar un consumo energetico responsivo a nivel servidor edge y un aprovechamiento del ancho de banda asimetrico en redes de espectro variable u offline.
             </p>

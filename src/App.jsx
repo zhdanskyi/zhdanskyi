@@ -18,7 +18,7 @@ function App() {
 
   return (
     <SeoLayout>
-      <div className={`w-full min-h-screen ${isHome ? 'flex items-center justify-center bg-light-bg dark:bg-dark-bg bg-matrix' : 'h-auto overflow-y-auto bg-light-box dark:bg-[#050505] transition-colors duration-500'}`}>
+      <div className={`w-full min-h-screen pb-28 ${isHome ? 'flex items-center justify-center bg-power-bg dark:bg-dark-bg bg-matrix' : 'h-auto overflow-y-auto bg-power-bg dark:bg-dark-bg transition-colors duration-500'}`}>
         {/* accesibilidad a11y skip link */}
       <a href="#main-content" className="sr-only focus:not-sr-only">Saltar al contenido principal</a>
       <AnimatedBackground />
