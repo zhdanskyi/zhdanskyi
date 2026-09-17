@@ -15,8 +15,6 @@ Orientado a la resolución de retos técnicos con una curva de aprendizaje rápi
 
 ### 🚀 Proyectos Destacados
 
-*Aquí debes enlazar a tus 3 mejores repositorios. Asegúrate de que esos repositorios también tengan un buen README explicando qué hacen y cómo ejecutarlos.*
-
 *   **[Sistema Bancario ](https://github.com/zhdanskyi/core-bank)**: Arquitectura backend simulando operativas bancarias reales.
     *   *Stack:* Spring Boot, Python, React, Docker.
     *   *Características:* [Ej. Arquitectura orientada a microservicios / APIs seguras].
@@ -28,12 +26,3 @@ Orientado a la resolución de retos técnicos con una curva de aprendizaje rápi
     * 
 
 ---
-
-### 📈 Mis Estadísticas en GitHub
-
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=zhdanskyi&show_icons=true&theme=tokyonight" alt="Estadisticas" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zhdanskyi&layout=compact&theme=tokyonight" alt="Lenguajes mas usados" />
-</div>
-
