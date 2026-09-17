@@ -31,12 +31,9 @@ Orientado a la resolución de retos técnicos con una curva de aprendizaje rápi
 
 ### 📈 Mis Estadísticas en GitHub
 
-*(Nota: Para que esto funcione, debes reemplazar `tu_usuario` por `zhdanskyi` en los enlaces de abajo)*
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=zhdanskyi&show_icons=true&theme=tokyonight" alt="Estadísticas de Vitalii" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zhdanskyi&layout=compact&theme=tokyonight" alt="Lenguajes más usados" />
+  <img src="https://github-readme-stats.vercel.app/api?username=zhdanskyi&show_icons=true&theme=tokyonight" alt="Estadisticas" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zhdanskyi&layout=compact&theme=tokyonight" alt="Lenguajes mas usados" />
 </div>
 
-
-*(Actualmente buscando oportunidades de prácticas en Madrid - ¡Hablemos!)*
