@@ -4,7 +4,7 @@
 Orientado a la resolución de retos técnicos con una curva de aprendizaje rápida. Mi ecosistema principal de desarrollo es Java y Spring Boot, apoyado en Kotlin y Python para construir arquitecturas backend sólidas.
 ---
 
-### 💻 Stack
+###  Stack
 
 *   **Languages:** Java, Kotlin, Python.
 *   **Frameworks:** Spring Boot, Hibernate / JPA, React,Android studio ,FastAPI
@@ -13,7 +13,7 @@ Orientado a la resolución de retos técnicos con una curva de aprendizaje rápi
 
 ---
 
-### 🚀 Proyectos
+###  Proyectos
 
 *   **[Sistema Bancario ](https://github.com/zhdanskyi/core-bank)**: Arquitectura backend simulando operativas bancarias reales.
     *   *Stack:* Spring Boot, Python, React, Docker.
